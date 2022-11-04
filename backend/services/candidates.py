@@ -122,7 +122,10 @@ def calc_nearest_stat(
     min_dest = min([x.distance for x in objects]) if count else 0
     average_dest = sum([x.distance for x in objects]) / count if count else 0
 
-    _nearest = [x.obj for x in objects if x.distance == min_dest][0].dict() if count else None
+    _nearest = sorted(
+        [x.obj.dict() for x in objects if x.distance == min_dest],
+        key=lambda x: -x[modifier_field]
+    )[0] if count else None
 
     nearest_modifier = (_nearest[modifier_field] if with_modifier_stat else None) if count else 0
     average_modifier = (
@@ -141,7 +144,7 @@ def calc_nearest_stat(
 
 
 def calc_result_modifier_v1(form: CandidateForm) -> float:
-    return random.random()
+    pass
 
 
 def calc_result_modifier_v2(form: CandidateForm) -> float:

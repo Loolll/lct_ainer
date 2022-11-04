@@ -354,18 +354,18 @@ class Nearest(BaseModel):
 
 
 class BboxQuery(BaseModel):
-    lat_min: float
-    lat_max: float
-    lon_min: float
-    lon_max: float
+    lu_point: Georaphy
+    ru_point: Georaphy
+    rb_point: Georaphy
+    lb_point: Georaphy
 
     def to_poly(self) -> GeographyPolygon:
         return [
-            Georaphy(lat=self.lat_min, lon=self.lon_min),
-            Georaphy(lat=self.lat_min, lon=self.lon_max),
-            Georaphy(lat=self.lat_max, lon=self.lon_max),
-            Georaphy(lat=self.lat_max, lon=self.lon_min),
-            Georaphy(lat=self.lat_min, lon=self.lon_min),
+            self.lu_point,
+            self.ru_point,
+            self.rb_point,
+            self.lb_point,
+            self.lu_point
         ]
 
 
