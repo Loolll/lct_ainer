@@ -1,10 +1,13 @@
 import asyncio
+import logging
 from enum import Enum
 import random
 
 from store import *
 from models import Candidate, CandidateForm, Georaphy, CandidateType
 from analytic.distance_rate import predict as predict_rate
+
+logging.basicConfig(encoding='utf-8', level=logging.INFO)
 
 
 MAX_EXPECTED_RADIUS = 1000
@@ -26,7 +29,7 @@ class ModifierV1AroundWeights(float, Enum):
     nto_non_paper = 0.22
 
 
-MODIFIER_V1_NORMALIZE = sum([[x.value for x in ModifierV1AroundWeights]])
+MODIFIER_V1_NORMALIZE = sum([x.value for x in ModifierV1AroundWeights])
 
 
 async def get_point_candidate(
@@ -144,10 +147,11 @@ def calc_nearest_stat(
     min_dest = min([x.distance for x in objects]) if count else 0
     average_dest = sum([x.distance for x in objects]) / count if count else 0
 
+    _nearest_list = [x.obj.dict() for x in objects if x.distance == min_dest] if with_modifier_stat else []
     _nearest = sorted(
-        [x.obj.dict() for x in objects if x.distance == min_dest],
+       _nearest_list,
         key=lambda x: -x[modifier_field]
-    )[0] if count else None
+    )[0] if (count and with_modifier_stat) else None
 
     nearest_modifier = (_nearest[modifier_field] if with_modifier_stat else None) if count else 0
     average_modifier = (
@@ -251,7 +255,7 @@ def calc_result_modifier_v1(form: CandidateForm) -> float:
         form.nto_non_paper_average_dest
     ) * ModifierV1AroundWeights.nto_non_paper
 
-    return sum([
+    modifier = sum([
         state_value,
         district_value,
         metro_value,
@@ -267,13 +271,23 @@ def calc_result_modifier_v1(form: CandidateForm) -> float:
         houses_value,
     ]) / MODIFIER_V1_NORMALIZE
 
+    modifier = max(modifier, 0)
+    modifier = min(modifier, 1)
+
+    return modifier
+
 
 def calc_result_modifier_v2(form: CandidateForm) -> float:
     return random.random()
 
 
 def calc_rate_only_by_dest(count: int, min_dest: float, average_dest: float) -> float:
+    if not count:
+        return 0
+
     dist_weight_average = (((count + 1) // 2) * min_dest + (count - 1) * average_dest) \
                      / \
                      (count - 1 + (count + 1) // 2)
-    return MAX_EXPECTED_RADIUS / dist_weight_average
+
+    return dist_weight_average / MAX_EXPECTED_RADIUS
+
