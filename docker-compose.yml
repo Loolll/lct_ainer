@@ -24,8 +24,6 @@ services:
             context: frontend
             dockerfile: ./Dockerfile
         restart: always
-        volumes:
-            - ./frontend:/frontend
         network_mode: host
 
     backend:
