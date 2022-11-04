@@ -76,3 +76,13 @@ async def get_point_district(pool: asyncpg.Pool, point: Georaphy) -> District | 
           f"WHERE ST_CONTAINS(polygon, $1)"
     record = await pool.fetchrow(sql, to_postgis_point(point))
     return _parse_district(record, return_none=True)
+
+
+async def get_bbox_districts(
+        pool: asyncpg.Pool,
+        poly: list[Georaphy]
+) -> list[District]:
+    sql = f"SELECT {SELECTION_STRING} FROM {Tables.districts} " \
+          f"WHERE ST_INTERSECTS($1, polygon)"
+    records = await pool.fetch(sql, to_postgis_poly(poly))
+    return [_parse_district(x) for x in records]

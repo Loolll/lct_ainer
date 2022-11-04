@@ -2,7 +2,8 @@ import asyncpg
 from asyncpg import Record
 
 from misc.db import Tables
-from models import StateForm, State, from_postgis_polygons, to_postgis_polygons, to_postgis_point, Georaphy
+from models import StateForm, State, from_postgis_polygons, to_postgis_polygons, to_postgis_point, Georaphy, \
+    to_postgis_poly
 from exceptions import StateNotFoundedError
 
 
@@ -55,3 +56,13 @@ async def create_state(
 async def get_all_states(pool: asyncpg.Pool) -> list[State]:
     sql = f"SELECT {SELECTION_STRING} FROM {Tables.states}"
     return [_parse_state(x) for x in await pool.fetch(sql)]
+
+
+async def get_bbox_states(
+        pool: asyncpg.Pool,
+        poly: list[Georaphy]
+) -> list[State]:
+    sql = f"SELECT {SELECTION_STRING} FROM {Tables.states} " \
+          f"WHERE ST_INTERSECTS($1, polygons)"
+    records = await pool.fetch(sql, to_postgis_poly(poly))
+    return [_parse_state(x) for x in records]
