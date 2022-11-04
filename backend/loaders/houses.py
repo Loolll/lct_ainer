@@ -397,8 +397,7 @@ async def load(pool: asyncpg.Pool):
         for i, line in enumerate(file):
             if i == 0:
                 continue
-            if i == 1000:  # TODO
-                break
+
             line = line.strip()
 
             _, _, address, square, year, floors, entrances, rooms = map(

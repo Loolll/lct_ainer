@@ -31,8 +31,7 @@ async def main():
     # await load_nto_non_paper(pool)
     # await load_mfc(pool)
 
-    # TODO reload! without 1000 limit
-    # from .houses import load as load_houses
-    # await load_houses(pool)
+    from .houses import load as load_houses
+    await load_houses(pool)
 
-    await load_candidates(pool)
+    # await load_candidates(pool)
