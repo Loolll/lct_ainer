@@ -1,0 +1,209 @@
+﻿pullenti.address.AddressHelper: Разные полезные функции
+pullenti.address.AddressRepository: Репозиторий адресов (Адрессарий)
+pullenti.address.AddressService: Сервис работы с адресами
+pullenti.address.AreaAttributes: Атрибуты города, региона, района, квартала, улиц и т.п.
+pullenti.address.BaseAttributes: Базовый класс для атрибутивных классов: AreaAttributes, HouseAttributes, RoomAttributes, SpecialAttributes
+pullenti.address.GarLevel: Уровень адресного объекта
+pullenti.address.GarObject: Адресный объект ГАР
+pullenti.address.GarParam: Типы параметров ГАР
+pullenti.address.GarStatistic: Статистика по объектам ГАР
+pullenti.address.HouseAttributes: Атрибуты строений и участков
+pullenti.address.HouseType: Типы домов
+pullenti.address.ImageWrapper: Для иконок ГАР-обектов. Приходится работать через обёртку, так как ориентируемся на все платформы и языки
+pullenti.address.internal.gar.AddressObject: Адресный объект ГАР ФИАС
+pullenti.address.internal.gar.AddressObjectStatus
+pullenti.address.internal.gar.AddrInfo
+pullenti.address.internal.gar.AddrTyp
+pullenti.address.internal.gar.FiasDatabase
+pullenti.address.internal.gar.HouseObject
+pullenti.address.internal.gar.ParamType: Типы параметров элементов ГАР ФИАС
+pullenti.address.internal.gar.RoomObject
+pullenti.address.RepaddrObject: Адресный элемент из Адрессария
+pullenti.address.RoomAttributes: Атрибуты внутридомовых помещений (квартиры, комнаты), гаражей и машиномест
+pullenti.address.RoomType: Типы помещений
+pullenti.address.SearchParams: Параметры для поиска
+pullenti.address.SearchResult: Результат поискового запроса
+pullenti.address.SpecialAttributes: Атрибуты специфических адресных объектов (указатели, пересечения и др.)
+pullenti.address.SpecialType: Типы спецобъектов
+pullenti.address.StroenType: Типы строений
+pullenti.address.TextAddress: Полный адрес, выделяемый из текста
+pullenti.address.TextObject: Адресный объект, выделяемый из текста
+pullenti.morph.CharsInfo: Информация о символах токена
+pullenti.morph.LanguageHelper
+pullenti.morph.MorphAspect: Аспект (для глаголов)
+pullenti.morph.MorphBaseInfo: Базовая часть морфологической информации
+pullenti.morph.MorphCase: Падеж
+pullenti.morph.MorphClass: Часть речи
+pullenti.morph.MorphFinite: Для английских глаголов
+pullenti.morph.MorphForm: Форма
+pullenti.morph.MorphGender: Род (мужской-средний-женский)
+pullenti.morph.MorphLang: Язык
+pullenti.morph.MorphMiscInfo: Дополнительная морфологическая информация
+pullenti.morph.MorphMood: Наклонение (для глаголов)
+pullenti.morph.MorphNumber: Число (единственное-множественное)
+pullenti.morph.MorphologyService: Сервис морфологического анализа текстов (POS-tagger).
+pullenti.morph.MorphPerson: Лицо (1, 2, 3)
+pullenti.morph.MorphTense: Время (для глаголов)
+pullenti.morph.MorphToken: Элементы, на которые разбивается исходный текст (токены)
+pullenti.morph.MorphVoice: Залог (для глаголов)
+pullenti.morph.MorphWordForm: Словоформа (вариант морфанализа лексемы)
+pullenti.ner.address.AddressAnalyzer: Анализатор адресов
+pullenti.ner.address.AddressBuildingType: Тип строения
+pullenti.ner.address.AddressDetailType: Детализация местоположения
+pullenti.ner.address.AddressHouseType: Тип дома
+pullenti.ner.address.AddressReferent: Сущность, представляющая адрес
+pullenti.ner.address.StreetKind: Классы улиц
+pullenti.ner.address.StreetReferent: Сущность: улица, проспект, площадь, шоссе и т.п. Выделяется анализатором AddressAnalyzer.
+pullenti.ner.AnalysisResult: Результат анализа
+pullenti.ner.Analyzer: Базовый класс для всех лингвистических анализаторов. Игнорируйте, если не собираетесь делать свой анализатор.
+pullenti.ner.bank.BankAnalyzer: Анализатор банковских данных (счетов, платёжных реквизитов...)
+pullenti.ner.bank.BankDataReferent: Банковские данные (реквизиты)
+pullenti.ner.business.BusinessAnalyzer: Анализатор для бизнес-фактов (в реальных проектах не использовалось).  Специфический анализатор, то есть нужно явно создавать процессор через функцию CreateSpecificProcessor,  указав имя анализатора.
+pullenti.ner.business.BusinessFactKind: Типы бизнес-фактов
+pullenti.ner.business.BusinessFactReferent: Сущность для бизнес-факта
+pullenti.ner.business.FundsKind: Типы ценных бумаг
+pullenti.ner.business.FundsReferent: Ценные бумаги (акции, доли в уставном капитале и пр.)
+pullenti.ner.chat.ChatAnalyzer
+pullenti.ner.chat.ChatReferent
+pullenti.ner.chat.ChatType: Типы диалоговых элементов
+pullenti.ner.chat.VerbType: Тип глагольной формы
+pullenti.ner.core.AnalysisKit: Внутренний аналитический контейнер данных. Создаётся автоматически внутри при вызове Processor.Process(...).  Все токены Token ссылаются через поле Kit на экземпляр контейнера, связанного с обрабатываемым текстом.
+pullenti.ner.core.AnalyzerData: Данные, полученные в ходе обработки одним анализатором. Каждый анализатор сохраняет в своём класса свои данные,  получаемые в ходе анализа. В конце процессор объединяет их все. Получить экземпляр, связанный с анализатором,  можно методом AnalyzerKit.GetAnalyzerDataByAnalyzerName.
+pullenti.ner.core.AnalyzerDataWithOntology
+pullenti.ner.core.BracketHelper: Поддержка анализа скобок и кавычек
+pullenti.ner.core.BracketParseAttr: Атрибуты выделения последовательности между скобок-кавычек. Битовая маска.
+pullenti.ner.core.BracketSequenceToken: Метатокен - представление последовательности, обрамлённой кавычками (скобками)
+pullenti.ner.core.CanBeEqualsAttr: Атрибуты функции CanBeEqualsEx класса MiscHelper. Битовая маска.
+pullenti.ner.core.ConjunctionHelper: Поддержка работы с союзами (запятая тоже считается союзом). Союзы могут быть из нескольких слов,  например, "а также и".
+pullenti.ner.core.ConjunctionToken: Метатокен - представление союзов и других служебных слов. Они могут быть из нескольких токенов, например, "из-за того что".  Получить можно с помощью ConjunctionHelper.TryParse(t)
+pullenti.ner.core.ConjunctionType: Типы союзов и служебных слов
+pullenti.ner.core.GetTextAttr: Атрибуты получения текста методами GetTextValue и GetTextValueOfMetaToken класса MiscHelper. Битовая маска.
+pullenti.ner.core.IntOntologyCollection
+pullenti.ner.core.IntOntologyItem
+pullenti.ner.core.IntOntologyToken
+pullenti.ner.core.MiscHelper: Разные полезные процедурки лингвистического анализа. Особо полезные функции выделены шрифтом.
+pullenti.ner.core.NounPhraseHelper: Выделение именных групп - это существительное с согласованными прилагательными (если они есть).
+pullenti.ner.core.NounPhraseMultivarToken: Вариант расщепления именной группы, у которой слиплись существительные.  Получается методом GetMultivars() у NounPhraseToken, у которой MultiNouns = true.
+pullenti.ner.core.NounPhraseParseAttr: Атрибуты выделения именных групп NounPhraseHelper.TryParse(). Битовая маска.
+pullenti.ner.core.NounPhraseToken: Метатокен - именная группа (это существительное с возможными прилагательными, морфологичски согласованными).  Выделяется методом TryParse() класса NounPhraseHelper.
+pullenti.ner.core.NumberExToken
+pullenti.ner.core.NumberExType
+pullenti.ner.core.NumberHelper: Работа с числовыми значениями
+pullenti.ner.core.NumberParseAttr
+pullenti.ner.core.PrepositionHelper: Поддержка работы с предлогами
+pullenti.ner.core.PrepositionToken: Метатокен - предлог (они могут быть из нескольких токенов, например,  "несмотря на", "в соответствии с").  Создаётся методом PrepositionHelper.TryParse(t).
+pullenti.ner.core.ProperNameHelper
+pullenti.ner.core.ReferentsEqualType: Атрибут сравнения сущностей (методом Referent.CanBeEquals)
+pullenti.ner.core.SerializeHelper: Сериализация сущностей
+pullenti.ner.core.StatisticBigrammInfo: Статистическая информация о биграмме - возвращается StatisticCollection.GetBigrammInfo
+pullenti.ner.core.StatisticCollection: Статистическая информация о словоформах и их биграммах в тексте - поле AnalysisKit.Statistic.
+pullenti.ner.core.StatisticWordInfo: Статистическая информация о токене - возвращается StatisticCollection.GetWordInfo
+pullenti.ner.core.TableCellToken
+pullenti.ner.core.TableHelper
+pullenti.ner.core.TableRowToken
+pullenti.ner.core.Termin: Термин, понятие, система обозначений чего-либо и варианты его написания. Элемент словаря TerminCollection.
+pullenti.ner.core.TerminCollection: Словарь некоторых обозначений, терминов, сокращений. Очень полезный класс!  Рассчитан на быстрый поиск токена или группы токенов среди большого списка терминов.
+pullenti.ner.core.TerminParseAttr: Атрибуты привязки токена к термину словаря TerminCollection методом TryParse. Битовая маска.
+pullenti.ner.core.TerminToken: Метатокен - результат привязки термина Termin словаря TerminCollection. Формируется методом TryParse или TryParseAll у TerminCollection.
+pullenti.ner.core.VerbPhraseHelper: Работа с глагольными группами (последовательность из глаголов и наречий)
+pullenti.ner.core.VerbPhraseItemToken: Элемент глагольной группы VerbPhraseToken
+pullenti.ner.core.VerbPhraseToken: Метатокен - глагольная группа (последовательность глаголов, наречий и причастий).  Создаётся методом VerbPhraseHelper.TryParse.
+pullenti.ner.date.DateAnalyzer: Анализатор для дат и их диапазонов
+pullenti.ner.date.DatePointerType: Дополнительные указатели для дат
+pullenti.ner.date.DateRangeReferent: Сущность, представляющая диапазон дат
+pullenti.ner.date.DateReferent: Сущность, представляющая дату
+pullenti.ner.definition.DefinitionAnalyzer: Анализатор определений.  Специфический анализатор, то есть нужно явно создавать процессор через функцию CreateSpecificProcessor,  указав имя анализатора.
+pullenti.ner.definition.DefinitionKind: Тип тезиса
+pullenti.ner.definition.DefinitionReferent: Сущность, моделирующая тезис (утверждение, определения)
+pullenti.ner.definition.DefinitionWithNumericToken
+pullenti.ner.denomination.DenominationAnalyzer: Анализатор деноминаций и обозначений (типа C#, A-320)  Специфический анализатор, то есть нужно явно создавать процессор через функцию CreateSpecificProcessor,  указав имя анализатора.
+pullenti.ner.denomination.DenominationReferent: Сущность, моделирующая буквенно-цифровые комбинации (например, Си++, СС-300)
+pullenti.ner.ExtOntology: Внешняя "онтология". Содержит дополнительтную информацию для обработки (сущностей) -  это список элементов, связанных с внешними сущностями.  Подаётся необязательным параметром на вход методу Process() класса Processor.
+pullenti.ner.ExtOntologyItem: Элемент внешней онтологии
+pullenti.ner.fias.FiasAnalyzer: Привязка географических объектов к классификатору ГАР ФИАС
+pullenti.ner.fias.FiasReferent: Обертка над объектом ГИС ФИАС
+pullenti.ner.geo.GeoAnalyzer: Анализатор географических объектов (стран, регионов, населённых пунктов)
+pullenti.ner.geo.GeoReferent: Сущность, описывающая территорию как административную единицу.  Это страны, автономные образования, области, административные районы, населённые пункты и пр.
+pullenti.ner.keyword.KeywordAnalyzer: Анализатор ключевых комбинаций.  Специфический анализатор, то есть нужно явно создавать процессор через функцию CreateSpecificProcessor,  указав имя анализатора.
+pullenti.ner.keyword.KeywordReferent: Ключевая комбинация
+pullenti.ner.keyword.KeywordType: Тип ключевой комбинации
+pullenti.ner.mail.MailAnalyzer: Анализатор текстов электронных писем и их блоков. Восстановление структуры, разбиение на блоки,  анализ блока подписи.  Специфический анализатор, то есть нужно явно создавать процессор через функцию CreateSpecificProcessor,  указав имя анализатора.
+pullenti.ner.mail.MailKind: Тип блока письма
+pullenti.ner.mail.MailReferent: Сущность - блок письма
+pullenti.ner.measure.MeasureAnalyzer: Анализатор для измеряемых величин.  Специфический анализатор, то есть нужно явно создавать процессор через функцию CreateSpecificProcessor,
+pullenti.ner.measure.MeasureKind: Что измеряется этой величиной
+pullenti.ner.measure.MeasureReferent: Величина или диапазон величин, измеряемая в некоторых единицах
+pullenti.ner.measure.UnitReferent: Единица измерения вместе с множителем
+pullenti.ner.metadata.Feature: Атрибут класса сущностей
+pullenti.ner.metadata.ImageWrapper: Приходится работать через обёртку, так как ориентируемся на все платформы и языки
+pullenti.ner.metadata.ReferentClass: Описатель класса сущностей
+pullenti.ner.MetaToken: Метатокен - надстройка над диапазоном других токенов. Базовый класс для подавляющего числа всех токенов:  NumberToken, ReferentToken, NounPhraseToken и пр.
+pullenti.ner.money.MoneyAnalyzer: Анализатор для денежных сумм
+pullenti.ner.money.MoneyReferent: Сущность - денежная сумма
+pullenti.ner.MorphCollection: Коллекция морфологических вариантов
+pullenti.ner.named.NamedEntityAnalyzer: Анализатор именованных сущностей "тип" + "имя": планеты, памятники, здания, местоположения, планеты и пр.
+pullenti.ner.named.NamedEntityKind: Категории мелких именованных сущностей
+pullenti.ner.named.NamedEntityReferent: Сущность "тип" + "имя" (планеты, памятники, здания, местоположения, планеты и пр.)
+pullenti.ner.NumberSpellingType: Тип написания числительного NumberToken
+pullenti.ner.NumberToken: Метатокен - число (числительное). Причём задаваемое не только цифрами, но и словами, возможно, римская запись и др.  Для получения см. методы NumberHelper.
+pullenti.ner.org.OrganizationAnalyzer: Анализатор организаций
+pullenti.ner.org.OrganizationKind: Категории организаций. Не хранятся, а вычисляются на основе других атрибутов.
+pullenti.ner.org.OrganizationReferent: Сущность - организация
+pullenti.ner.org.OrgProfile: Профили организации, хранятся в атрибутах ATTR_PROFILE, может быть несколько.
+pullenti.ner.person.PersonAnalyzer: Анализатор выделения персон и их атрибутов (должности, звания и пр.)
+pullenti.ner.person.PersonIdentityReferent: Удостоверение личности (паспорт и пр.)
+pullenti.ner.person.PersonPropertyKind: Категории свойств персон
+pullenti.ner.person.PersonPropertyReferent: Сущность - свойство персоны (должность, звание...)
+pullenti.ner.person.PersonReferent: Сущность - персона
+pullenti.ner.phone.PhoneAnalyzer: Анализатор для выделения телефонных номеров
+pullenti.ner.phone.PhoneKind: Тип телефонного номера
+pullenti.ner.phone.PhoneReferent: Сущность - телефонный номер
+pullenti.ner.Processor: Лингвистический процессор
+pullenti.ner.ProcessorService: Служба лингвистических процессоров
+pullenti.ner.Referent: Базовый класс для всех именованных сущностей
+pullenti.ner.ReferentToken: Токен, соответствующий сущности
+pullenti.ner.resume.ResumeAnalyzer: Анализатор резюме (специфический анализатор)
+pullenti.ner.resume.ResumeItemReferent: Элемент резюме
+pullenti.ner.resume.ResumeItemType: Тип элемента резюме
+pullenti.ner.sentiment.SentimentAnalyzer: Анализатор для сентиментов (эмоциональная оценка)
+pullenti.ner.sentiment.SentimentKind: Тип сентимента
+pullenti.ner.sentiment.SentimentReferent: Фрагмент, соответсвующий сентиментной оценке
+pullenti.ner.ServerService: Поддержка проведения анализа текста на внешнем сервере
+pullenti.ner.Slot: Значение атрибута в конкретном экземпляре сущности
+pullenti.ner.SourceOfAnalysis: Анализируемый текст, точнее, обёртка над ним
+pullenti.ner.TextAnnotation: Аннотация слитного фрагмента текста (фрагмент вхождения сущности в текст)
+pullenti.ner.TextToken: Входной токен (после морфанализа)
+pullenti.ner.Token: Базовый класс для всех токенов. Наследные классы - TextToken (конечная словоформа) и MetaToken (связный фрагмент других токенов).
+pullenti.ner.transport.TransportAnalyzer: Анализатор транспортных стредств
+pullenti.ner.transport.TransportKind: Категории транспортных средств
+pullenti.ner.transport.TransportReferent: Сущность - транспортное средство
+pullenti.ner.uri.UriAnalyzer: Анализатор для выделения URI-объектов (схема:значение)
+pullenti.ner.uri.UriReferent: Сущность URI - всё, что укладывается в СХЕМА:ЗНАЧЕНИЕ (www, email, ISBN, УДК, ББК, ICQ и пр.)
+pullenti.ner.vacance.VacanceAnalyzer: Анализатор вакансий (специфический анализатор)
+pullenti.ner.vacance.VacanceItemReferent: Элемент вакансии
+pullenti.ner.vacance.VacanceItemType: Тип элемента вакансии
+pullenti.ner.weapon.WeaponAnalyzer: Анализатор оружия
+pullenti.ner.weapon.WeaponReferent: Сущность - оружие
+pullenti.semantic.core.ISemanticOnto: Интерфейс внешней дополнительной онтологии  (для улучшения качества семантичсекой обработки)
+pullenti.semantic.core.SemanticAbstractSlave
+pullenti.semantic.core.SemanticHelper: Полезные фукнции для семантического анализа
+pullenti.semantic.core.SemanticLink: Семантическая связь двух элементов
+pullenti.semantic.core.SemanticRole: Семантические роли
+pullenti.semantic.utils.ControlModel: Модель управления
+pullenti.semantic.utils.ControlModelItem: Элемент модели управления
+pullenti.semantic.utils.ControlModelItemType: Тип элемента модели управления
+pullenti.semantic.utils.ControlModelQuestion: Вопрос модели управления
+pullenti.semantic.utils.DerivateGroup: Дериватная группа - группа, содержащая однокоренные слова разных частей речи и языков,  а также модель управления (что может идти за словом).
+pullenti.semantic.utils.DerivateService: Сервис для получение информации о словах. Однокоренные слова объединены в так называемые дериватные группы.  В настоящий момент поддержаны русский и украинский языки.
+pullenti.semantic.utils.DerivateWord: Слово дериватной группы DerivateWord
+pullenti.semantic.utils.ExplanWordAttr: Атрибуты слова дериватной группы DerivateWord
+pullenti.semantic.utils.QuestionType: Абстрактные вопросы модели управления
+pullenti.util.ConsoleHelper: Запись в лог-файл и на экран
+pullenti.util.FileHelper: Различные утилитки работы с файлами
+pullenti.util.ITranslator
+pullenti.util.repository.BaseTable
+pullenti.util.repository.DateIndexTable
+pullenti.util.repository.FixRecordBaseTable
+pullenti.util.repository.IRepository
+pullenti.util.repository.KeyBaseTable
+pullenti.util.repository.StringDictionaryTable

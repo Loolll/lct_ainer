@@ -1,0 +1,3268 @@
+{
+  "ShortName": "Физкультурно-оздоровительный комплекс «ГБУ «СШ «Борец» Москомспорта»",
+  "FullName": "Физкультурно-оздоровительный комплекс «ГБУ «СШ «Борец» Москомспорта»",
+  "CommonName": "Физкультурно-оздоровительный комплекс «ГБУ «СШ «Борец» Москомспорта»",
+  "OrgInfo": [
+    {
+      "is_deleted": 0,
+      "FullName": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ «СПОРТИВНАЯ ШКОЛА «БОРЕЦ» ДЕПАРТАМЕНТА СПОРТА ГОРОДА МОСКВЫ",
+      "ChiefPhone": [
+        {
+          "is_deleted": 0,
+          "global_id": 22949,
+          "ChiefPhone": "(000) 000-00-00"
+        },
+        {
+          "is_deleted": 0,
+          "global_id": 22949,
+          "ChiefPhone": ""
+        }
+      ],
+      "INN": "7732004599",
+      "KPP": "772901001",
+      "OGRN": "1027739426274",
+      "LegalAddress": "119634, ГОРОД МОСКВА, ШОССЕ БОРОВСКОЕ, 37, 1",
+      "ChiefName": "КУРИННОЙ ИГОРЬ ИГОРЕВИЧ",
+      "ChiefPosition": "директор",
+      "global_id": 23028
+    },
+    {
+      "is_deleted": 0,
+      "FullName": "",
+      "ChiefPhone": [
+        {
+          "is_deleted": 0,
+          "global_id": 22949,
+          "ChiefPhone": "(000) 000-00-00"
+        },
+        {
+          "is_deleted": 0,
+          "global_id": 22949,
+          "ChiefPhone": ""
+        }
+      ],
+      "INN": "",
+      "KPP": "",
+      "OGRN": "",
+      "LegalAddress": "",
+      "ChiefName": "",
+      "ChiefPosition": "",
+      "global_id": 23028
+    }
+  ],
+  "ObjectAddress": [
+    {
+      "is_deleted": 0,
+      "AdmArea": "Западный административный округ",
+      "District": "район Ново-Переделкино",
+      "PostalCode": "119634",
+      "Address": "Российская Федерация, город Москва, внутригородская территория муниципальный округ Ново-Переделкино, Боровское шоссе, дом 37, корпус 1",
+      "Availability": [
+        {
+          "is_deleted": 0,
+          "global_id": 7513,
+          "available_k": "недоступно",
+          "available_o": "недоступно",
+          "available_z": "недоступно",
+          "available_s": "недоступно",
+          "available_element": [
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "визуальные средства информации о предоставлении услуги",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "тактильные средства информации",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие указателей, пиктограмм",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "тактильная полоса перед лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие надписей",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "ширина двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "тактильная полоса перед входной лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "тактильное обозначение санузла",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "недоступно",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "габариты зоны сидения (глубина)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "указатели направления движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "ширина входной двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона рядом с унитазом",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина дверей в кабинеты",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона у раковины для кресла-коляски",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина полосы движения (при обслуживании с перемещением)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "контрастная маркировка ступеней",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "габариты кабины",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            }
+          ]
+        },
+        {
+          "is_deleted": 0,
+          "global_id": 7513,
+          "available_k": null,
+          "available_o": null,
+          "available_z": null,
+          "available_s": null,
+          "available_element": [
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "визуальные средства информации о предоставлении услуги",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "тактильные средства информации",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие указателей, пиктограмм",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "тактильная полоса перед лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие надписей",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "ширина двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "тактильная полоса перед входной лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "тактильное обозначение санузла",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "недоступно",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "габариты зоны сидения (глубина)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "указатели направления движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "ширина входной двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона рядом с унитазом",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина дверей в кабинеты",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона у раковины для кресла-коляски",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина полосы движения (при обслуживании с перемещением)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "контрастная маркировка ступеней",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "габариты кабины",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            }
+          ]
+        }
+      ],
+      "global_id": 23504
+    },
+    {
+      "is_deleted": 0,
+      "AdmArea": null,
+      "District": null,
+      "PostalCode": "",
+      "Address": "",
+      "Availability": [
+        {
+          "is_deleted": 0,
+          "global_id": 7513,
+          "available_k": "недоступно",
+          "available_o": "недоступно",
+          "available_z": "недоступно",
+          "available_s": "недоступно",
+          "available_element": [
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "визуальные средства информации о предоставлении услуги",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "тактильные средства информации",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие указателей, пиктограмм",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "тактильная полоса перед лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие надписей",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "ширина двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "тактильная полоса перед входной лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "тактильное обозначение санузла",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "недоступно",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "габариты зоны сидения (глубина)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "указатели направления движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "ширина входной двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона рядом с унитазом",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина дверей в кабинеты",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона у раковины для кресла-коляски",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина полосы движения (при обслуживании с перемещением)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "контрастная маркировка ступеней",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "габариты кабины",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            }
+          ]
+        },
+        {
+          "is_deleted": 0,
+          "global_id": 7513,
+          "available_k": null,
+          "available_o": null,
+          "available_z": null,
+          "available_s": null,
+          "available_element": [
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "визуальные средства информации о предоставлении услуги",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "тактильные средства информации",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие указателей, пиктограмм",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "тактильная полоса перед лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "наличие надписей",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "ширина двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "тактильная полоса перед входной лестницей",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "тактильное обозначение санузла",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "недоступно",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "машино-место для инвалидов",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "нулевой вход",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "габариты зоны сидения (глубина)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": "инвалиды по слуху",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "указатели направления движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лифт",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "ширина входной двери",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона рядом с унитазом",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина дверей в кабинеты",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "поручни на имеющейся лестнице",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "информационные указатели",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "зона у раковины для кресла-коляски",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "лестницы на пути движения",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "зона оказания услуги",
+              "Element_mgn": "ширина полосы движения (при обслуживании с перемещением)",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": "инвалиды по зрению",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "контрастная маркировка ступеней",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "санитарный узел",
+              "Element_mgn": "габариты кабины",
+              "available_degree": "частично",
+              "available_index": "не соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "территория объекта",
+              "Element_mgn": "безбарьерный путь до главного входа",
+              "available_degree": "частично",
+              "available_index": "есть"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": "инвалиды-опорники",
+              "Area_mgn": "пути движения и эвакуации",
+              "Element_mgn": "ширина полосы движения",
+              "available_degree": "частично",
+              "available_index": "соответствует"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": "инвалиды-колясочники",
+              "Area_mgn": "входная группа",
+              "Element_mgn": "платформа подъемная (мобильный лестничный подъемник)",
+              "available_degree": "частично",
+              "available_index": "нет"
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 327911,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328048,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328134,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328135,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328138,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328216,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328511,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328572,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 328623,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329035,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329036,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329097,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329239,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329241,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329283,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329396,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329483,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329595,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329695,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329734,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329737,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329950,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 329986,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330069,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330180,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330337,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330372,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330388,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330519,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330574,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330683,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330785,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330821,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330822,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330823,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 330847,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331083,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331132,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331217,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331328,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331436,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            },
+            {
+              "is_deleted": 0,
+              "global_id": 331653,
+              "Group_mgn": null,
+              "Area_mgn": null,
+              "Element_mgn": null,
+              "available_degree": null,
+              "available_index": null
+            }
+          ]
+        }
+      ],
+      "global_id": 23504
+    }
+  ],
+  "ChiefName": "Куринной Игорь Игоревич",
+  "ChiefPosition": "директор",
+  "ChiefPhone": [
+    {
+      "is_deleted": 0,
+      "ChiefPhone": "(495) 733-57-67",
+      "global_id": 24964
+    },
+    {
+      "is_deleted": 0,
+      "ChiefPhone": "",
+      "global_id": 24964
+    }
+  ],
+  "PublicPhone": [
+    {
+      "is_deleted": 0,
+      "PublicPhone": "(495) 733-57-67",
+      "global_id": 25020
+    },
+    {
+      "is_deleted": 0,
+      "PublicPhone": "",
+      "global_id": 25020
+    }
+  ],
+  "Fax": [],
+  "Email": [
+    {
+      "is_deleted": 0,
+      "Email": "info@borec.ru",
+      "global_id": 22965
+    },
+    {
+      "is_deleted": 0,
+      "Email": "",
+      "global_id": 22965
+    }
+  ],
+  "WebSite": "",
+  "WorkingHours": [
+    {
+      "is_deleted": 0,
+      "DayWeek": "понедельник",
+      "WorkHours": "08:30-22:30",
+      "global_id": 161084
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": "вторник",
+      "WorkHours": "08:30-22:30",
+      "global_id": 160983
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": "среда",
+      "WorkHours": "08:30-22:30",
+      "global_id": 161229
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": "четверг",
+      "WorkHours": "08:30-22:30",
+      "global_id": 161005
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": "пятница",
+      "WorkHours": "08:30-22:30",
+      "global_id": 160726
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": "суббота",
+      "WorkHours": "08:30-22:30",
+      "global_id": 161230
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": "воскресенье",
+      "WorkHours": "закрыто",
+      "global_id": 160725
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 161084
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 160983
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 161229
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 161005
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 160726
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 161230
+    },
+    {
+      "is_deleted": 0,
+      "DayWeek": null,
+      "WorkHours": "",
+      "global_id": 160725
+    }
+  ],
+  "ClarificationWorkingHours": "",
+  "global_id": 1074989254
+}}, "type": "Feature"}, {"geometry": {"coordinates":[[37.3514608573309, 55.645978610707]], "type": "MultiPoint"}, "properties": {"DatasetId": 629, "VersionNumber": 3, "ReleaseNumber": 181, "RowId": null, "Attributes": {"ShortName":"Крытое сооружение с искусственным льдом «Радужный»", "FullName": "Крытое сооружение с искусственным льдом «Радужный»", "CommonName": "Крытое сооружение с искусственным льдом «Радужный»","OrgInfo":[
+{"is_deleted": 0, "FullName": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ «МОСКОВСКАЯ КОМПЛЕКСНАЯ СПОРТИВНАЯ ШКОЛА ОЛИМПИЙСКОГО РЕЗЕРВА «ЗАПАД» ДЕПАРТАМЕНТА СПОРТА ГОРОДА МОСКВЫ", "ChiefPhone":[{"is_deleted": 0, "global_id": 23049, "ChiefPhone": "(000) 000-00-00"}, {"is_deleted": 0, "global_id": 23049, "ChiefPhone": ""}]

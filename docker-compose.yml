@@ -1,0 +1,54 @@
+version: "3.4"
+
+services:
+    pgweb:
+        image: sosedoff/pgweb
+        environment:
+            - DATABASE_URL=${DB_DEST}?sslmode=disable
+        network_mode: host
+
+    loader:
+        build:
+            context: backend
+            dockerfile: ./etc/python.Dockerfile
+        command: python3 code/load_data.py
+        env_file:
+            - .env
+        volumes:
+            - ./backend/:/code/
+            - ./backend/datasets:/datasets/
+        network_mode: host
+
+    frontend:
+        build:
+            context: frontend
+            dockerfile: ./Dockerfile
+        restart: always
+        volumes:
+            - ./frontend:/frontend
+        network_mode: host
+
+    backend:
+        build:
+            context: backend
+            dockerfile: ./etc/python.Dockerfile
+        command: python3 code/app.py
+        restart: always
+        env_file:
+            - .env
+        volumes:
+            - ./backend/:/code/
+        network_mode: host
+
+    spiders:
+        build:
+            context: backend
+            dockerfile: ./etc/python.Dockerfile
+        command: python3 code/spiders.py
+        env_file:
+            - .env
+        volumes:
+            - ./backend/:/code/
+            - ./backend/datasets:/datasets/
+            - ./share/:/share/
+        network_mode: host
