@@ -5,7 +5,6 @@ from contextlib import suppress
 from pydantic import BaseModel
 from typing import Optional, Any
 
-import time
 import logging
 from tensorflow.python import keras
 from tensorflow.python.keras import optimizers
@@ -13,8 +12,7 @@ from tensorflow.python.keras import layers
 
 from pullenti.address.AddressService import AddressService
 
-
-from models import Georaphy, District, HouseForm
+from models import Georaphy, HouseForm
 from store import houses as store
 from store.district import get_point_district
 import os
