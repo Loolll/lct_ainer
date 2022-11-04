@@ -53,13 +53,18 @@ def train():
 
     dataset = load_dataset()
 
+    fig, ax = plt.subplots()
     while True:
         count = random.randint(1, 9)
         x = np.random.randint(0, 500, count)
         y = np.random.random(count)
 
-        plt.scatter(x, y)
-        plt.grid()
+
+        ax.scatter(x, y)
+        ax.grid()
+        fig.set_figwidth(20)
+        fig.set_figheight(20)
+
         plt.show(block=False)
 
         try:
@@ -74,11 +79,12 @@ def train():
 
             logging.info(str(dataset[0][-1]))
         except:
+            plt.close()
             break
         finally:
-            plt.close()
+            ax.clear()
 
-    model.fit(dataset[0], dataset[1], epochs=20)
+    model.fit(dataset[0], dataset[1], epochs=150)
     model.save(MODEL_PATH)
 
     with open(DATASET_PATH, 'w') as file:
