@@ -1,0 +1,4 @@
+
+
+COLOR_LOWER = [2, 6, 51]  # BLUE
+COLOR_HIGH = [253, 12, 80]  # RED

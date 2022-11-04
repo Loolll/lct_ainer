@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Optional, Any
 
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 from ast import literal_eval
 
 class Georaphy(BaseModel):
@@ -333,6 +333,21 @@ class MapCandidate(BaseModel):
     modifier_v2: float
 
 
+class HeatmapCandidate(MapCandidate):
+    color: str
+
+    @staticmethod
+    def get_hex_color(r: int, g: int, b: int) -> str:
+        return f'#{hex(r)[2:]}{hex(g)[2:]}{hex(b)[2:]}'
+
+    @validator('color', pre=True)
+    def _validate_color(cls, value: str | list) -> str:
+        if type(value) is list:
+            return HeatmapCandidate.get_hex_color(*value)
+        else:
+            return value
+
+
 class Nearest(BaseModel):
     distance: float
     obj: Any
@@ -352,3 +367,8 @@ class BboxQuery(BaseModel):
             Georaphy(lat=self.lat_max, lon=self.lon_min),
             Georaphy(lat=self.lat_min, lon=self.lon_min),
         ]
+
+
+class ModifierType(str, Enum):
+    modifier_v1 = 'modifier_v1'
+    modifier_v2 = 'modifier_v2'

@@ -2,7 +2,10 @@ import asyncpg
 from asyncpg import Record
 
 from misc.db import Tables
-from models import CandidateForm, Candidate, to_postgis_point, Georaphy, Nearest, to_postgis_poly, MapCandidate
+from misc.colors import get_color_grad
+from models import CandidateForm, Candidate, \
+    to_postgis_point, Georaphy, Nearest, ModifierType, \
+    to_postgis_poly, MapCandidate, HeatmapCandidate
 from exceptions import CandidateNotFounded
 from store.bases import get_nearest
 
@@ -10,6 +13,7 @@ SELECTION_STRING = '*, ST_X(point) as point_lat, ST_Y(point) as point_lon'
 MAP_CANDIDATE_SELECTION_STRING = 'id, address, abbrev_ao, district_id, ' \
                                  'ST_X(point) as point_lat, ST_Y(point) as point_lon,' \
                                  'type, calculated_radius, modifier_v1, modifier_v2'
+
 
 def _parse_candidate(
         record: Record,
@@ -83,6 +87,24 @@ async def get_bbox_map_candidates(
           f"WHERE ST_CONTAINS($1, point)"
     records = await pool.fetch(sql, to_postgis_poly(poly))
     return [_parse_map_candidate(x) for x in records]
+
+
+async def get_bbox_heatmap_candidates(
+        pool: asyncpg.Pool,
+        poly: list[Georaphy],
+        modifier_type: ModifierType = ModifierType.modifier_v1
+) -> list[HeatmapCandidate]:
+    candidates = await get_bbox_map_candidates(pool, poly=poly)
+    return [
+        HeatmapCandidate(
+            **x.dict(),
+            color=get_color_grad(
+                x.modifier_v2
+                if modifier_type == ModifierType.modifier_v2 else
+                x.modifier_v1
+            )
+        ) for x in candidates
+    ]
 
 
 async def get_nearest_candidate(
