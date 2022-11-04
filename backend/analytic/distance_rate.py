@@ -102,4 +102,7 @@ def predict(
     if not model:
         load_model()
 
-    return model.predict((count, min_dest, average_dest, nearest_modifier, average_modifier))[0][0]
+    if not count:
+        return 0
+
+    return model.predict([(count, min_dest, average_dest, nearest_modifier, average_modifier)])[0][0]
