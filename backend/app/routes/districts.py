@@ -3,7 +3,7 @@ from asyncpg import Pool
 
 from misc.db import get_db
 from store import district as store
-from models import District, BboxQuery, DistrictAutocompleteResponse
+from models import District, DistrictFilter, DistrictAutocompleteResponse
 
 
 router = APIRouter(tags=['Districts'])
@@ -31,8 +31,7 @@ async def get_district(id: int, pool: Pool = Depends(get_db)):
 
 @router.post(path='/bbox', response_model=list[District])
 async def get_by_bbox_districts(
-        bbox: BboxQuery,
+        query: DistrictFilter,
         pool: Pool = Depends(get_db)
 ):
-    return await store.get_bbox_districts(pool, poly=bbox.to_poly())
-
+    return await store.get_bbox_districts(pool, filter=query)

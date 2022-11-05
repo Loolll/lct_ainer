@@ -3,8 +3,9 @@ from asyncpg import Record
 
 from misc.db import Tables
 from misc.tools import autocomplete
-from models import DistrictForm, District, from_postgis_poly,\
-    to_postgis_poly, to_postgis_point, Georaphy, DistrictAutocompleteObject, DistrictAutocompleteResponse
+from models import DistrictForm, District, from_postgis_poly, \
+    to_postgis_poly, to_postgis_point, Georaphy, DistrictAutocompleteObject, DistrictAutocompleteResponse, \
+    DistrictFilter
 from exceptions import DistrictNotFoundedError
 
 
@@ -82,11 +83,17 @@ async def get_point_district(pool: asyncpg.Pool, point: Georaphy) -> District | 
 
 async def get_bbox_districts(
         pool: asyncpg.Pool,
-        poly: list[Georaphy]
+        filter: DistrictFilter
 ) -> list[District]:
+    district_filter = ''
+    if filter.districts_ids:
+        district_filter = f" id IN ({','.join(map(str, filter.districts_ids))}) AND "
+
     sql = f"SELECT {SELECTION_STRING} FROM {Tables.districts} " \
-          f"WHERE ST_INTERSECTS($1, polygon)"
-    records = await pool.fetch(sql, to_postgis_poly(poly))
+          f"WHERE {district_filter} ST_INTERSECTS($1, polygon)"
+
+    records = await pool.fetch(sql, to_postgis_poly(filter.to_poly()))
+
     return [_parse_district(x) for x in records]
 
 

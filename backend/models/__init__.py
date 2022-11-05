@@ -380,7 +380,15 @@ class BboxQuery(BaseModel):
 
 class CandidateFilter(BboxQuery):
     abbrev_ao: Optional[str]
-    districts_ids: Optional[tuple[int]]
+    districts_ids: Optional[list[int]]
+
+
+class StateFilter(BboxQuery):
+    abbrev_ao: Optional[str]
+
+
+class DistrictFilter(BboxQuery):
+    districts_ids: Optional[list[int]]
 
 
 class DistrictAutocompleteObject(BaseModel):

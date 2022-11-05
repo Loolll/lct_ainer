@@ -6,7 +6,7 @@ from misc.tools import autocomplete
 from models import StateForm, State, from_postgis_polygons, \
     to_postgis_polygons, \
     Georaphy, \
-    to_postgis_poly, StateAutocompleteObject, StateAutocompleteResponse
+    to_postgis_poly, StateAutocompleteObject, StateAutocompleteResponse, StateFilter
 from exceptions import StateNotFoundedError
 
 
@@ -63,11 +63,21 @@ async def get_all_states(pool: asyncpg.Pool) -> list[State]:
 
 async def get_bbox_states(
         pool: asyncpg.Pool,
-        poly: list[Georaphy]
+        filter: StateFilter
 ) -> list[State]:
+    values = []
+    state_filter = ''
+    if filter.abbrev_ao:
+        state_filter = f" abbrev = $2 AND "
+        values.append(filter.abbrev_ao)
+
     sql = f"SELECT {SELECTION_STRING} FROM {Tables.states} " \
-          f"WHERE ST_INTERSECTS($1, polygons)"
-    records = await pool.fetch(sql, to_postgis_poly(poly))
+          f"WHERE {state_filter} ST_INTERSECTS($1, polygons)"
+
+    records = await pool.fetch(
+        sql, to_postgis_poly(filter.to_poly()), *values
+    )
+
     return [_parse_state(x) for x in records]
 
 

@@ -8,7 +8,8 @@ from services import candidates as services
 from store import candidates as store
 from store import get_all_mfc, get_all_libraries, get_all_parkings, \
     get_all_metro, get_all_houses, get_all_sports, get_all_culture_houses,\
-    get_all_nto_paper, get_all_nto_non_paper, get_all_bus_stations, get_all_postamats
+    get_all_nto_paper, get_all_nto_non_paper, get_all_bus_stations, get_all_postamats, \
+    get_all_loaded_candidates
 from exceptions import *
 
 from store.district import get_point_district
@@ -20,6 +21,9 @@ CALCULATED_RADIUS = 400
 
 
 async def load(pool: asyncpg.Pool):
+    loaded = await get_all_loaded_candidates(pool)
+    loaded = set(loaded)
+    
     async def _load_type(objects, type: CandidateType):
         tasks = []
         loop = asyncio.get_event_loop()

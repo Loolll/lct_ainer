@@ -5,7 +5,7 @@ from misc.db import Tables
 from misc.colors import get_color_grad
 from models import CandidateForm, Candidate, \
     to_postgis_point, Georaphy, Nearest, \
-    to_postgis_poly, MapCandidate, CandidateFilter
+    to_postgis_poly, MapCandidate, CandidateFilter, CandidateType
 from exceptions import CandidateNotFounded
 from store.bases import get_nearest
 
@@ -116,3 +116,10 @@ async def get_nearest_candidate(
         table=Tables.candidates,
         parse_func=_parse_candidate
     )
+
+
+async def get_all_loaded_candidates(pool: asyncpg.Pool) -> list[(Georaphy, CandidateType)]:
+    sql = f"SELECT ST_X(point) as point_lat, ST_Y(point) as point_lon, type FROM {Tables.candidates}"
+    records = await pool.fetch(sql)
+
+    return [(Georaphy(lat=r['point_lat'], lon=r['point_lon']), r['type']) for r in records]
