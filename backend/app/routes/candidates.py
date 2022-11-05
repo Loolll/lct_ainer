@@ -42,7 +42,10 @@ async def export_candidates(
 ):
     candidates = await store.get_bbox_map_candidates(pool, filter=query)
 
-    path = f'/share/static/{uuid4()}.csv'
+    name = f'{uuid4()}.csv'
+    path = f'/share/static/{name}'
+    link = f'/static/{name}'
+
     with open(path, 'w') as file:
         keys = ['№', 'point_lat', 'point_lon'] + [
             k for k in candidates[0].dict().keys()
@@ -58,4 +61,4 @@ async def export_candidates(
             obj['point_lat'], obj['point_lon'] = point['lat'], point['lon']
             writer.writerow(obj)
 
-    return {'link': path}
+    return {'link': link}
