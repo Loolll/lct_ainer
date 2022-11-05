@@ -1,5 +1,10 @@
+from uuid import uuid4
+
 from fastapi import APIRouter, Depends
+from fastapi.responses import StreamingResponse, FileResponse, Response
 from asyncpg import Pool
+import csv
+from io import BytesIO, StringIO
 
 from misc.db import get_db
 from store import candidates as store
@@ -41,3 +46,20 @@ async def get_candidates_heatmap(
         poly=bbox.to_poly(),
         modifier_type=modifier_type
     )
+
+
+@router.post(path='/export')
+async def export_candidates(
+        bbox: BboxQuery,
+        pool: Pool = Depends(get_db),
+):
+    candidates = await store.get_bbox_map_candidates(pool, poly=bbox.to_poly())
+
+    path = f'/share/static/{uuid4()}.csv'
+    with open(path, 'w') as file:
+        keys = candidates[0].dict().keys()
+        writer = csv.DictWriter(file, keys)
+        writer.writeheader()
+        writer.writerows([x.dict() for x in candidates])
+
+    return {'link': path}

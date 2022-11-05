@@ -1,7 +1,6 @@
 import asyncio
 import logging
 from enum import Enum
-import random
 
 from store import *
 from models import Candidate, CandidateForm, Georaphy, CandidateType
@@ -14,6 +13,7 @@ MAX_EXPECTED_RADIUS = 1000
 
 
 class ModifierV1AroundWeights(float, Enum):
+    # Modifiers fetched from analytics
     state = 0.3
     district = 0.4
     metro = 0.21
@@ -29,7 +29,25 @@ class ModifierV1AroundWeights(float, Enum):
     nto_non_paper = 0.22
 
 
+class ModifierV2AroundWeights(float, Enum):
+    # Modifiers fetched from google survey
+    state = 3
+    district = 5
+    metro = 5.025
+    postamats = -5
+    parkings = 4
+    bus_stations = 5.025
+    houses = 5.375
+    culture_houses = 3.225
+    libraries = 3.225
+    sports = 3.6
+    mfc = 3.05
+    nto_paper = 3.725
+    nto_non_paper = 3.725
+
+
 MODIFIER_V1_NORMALIZE = sum([x.value for x in ModifierV1AroundWeights])
+MODIFIER_V2_NORMALIZE = sum([x.value for x in ModifierV2AroundWeights])
 
 
 async def get_point_candidate(
@@ -271,6 +289,23 @@ def calc_result_modifier_v1(form: CandidateForm) -> float:
         houses_value,
     ]) / MODIFIER_V1_NORMALIZE
 
+    # logging.info(str([
+    #     'Modifier V1',
+    #     state_value,
+    #     district_value,
+    #     metro_value,
+    #     postamats_value,
+    #     parking_value,
+    #     bus_stations_value,
+    #     culture_houses_value,
+    #     libraries_value,
+    #     mfc_value,
+    #     sports_value,
+    #     nto_paper_value,
+    #     nto_non_paper_value,
+    #     houses_value,
+    # ]))
+
     modifier = max(modifier, 0)
     modifier = min(modifier, 1)
 
@@ -278,7 +313,128 @@ def calc_result_modifier_v1(form: CandidateForm) -> float:
 
 
 def calc_result_modifier_v2(form: CandidateForm) -> float:
-    return random.random()
+    state_value = form.state_modifier * ModifierV2AroundWeights.state
+    district_value = form.district_modifier * ModifierV2AroundWeights.district
+
+    metro_value = predict_rate(
+        form.metro_count,
+        form.metro_min_dest,
+        form.metro_average_dest,
+        form.metro_nearest_modifier,
+        form.metro_average_modifier
+    ) * ModifierV2AroundWeights.metro
+
+    parking_value = predict_rate(
+        form.parkings_count,
+        form.parkings_min_dest,
+        form.parkings_average_dest,
+        form.parkings_nearest_modifier,
+        form.parkings_average_modifier,
+    ) * ModifierV2AroundWeights.parkings
+
+    houses_value = predict_rate(
+        form.houses_count,
+        form.houses_min_dest,
+        form.houses_average_dest,
+        form.houses_nearest_modifier,
+        form.houses_average_modifier,
+    ) * ModifierV2AroundWeights.houses
+
+    libraries_value = predict_rate(
+        form.libraries_count,
+        form.libraries_min_dest,
+        form.libraries_average_dest,
+        form.libraries_nearest_modifier,
+        form.libraries_average_modifier,
+    ) * ModifierV2AroundWeights.libraries
+
+    culture_houses_value = calc_rate_only_by_dest(
+        form.culture_houses_count,
+        form.culture_houses_min_dest,
+        form.culture_houses_average_dest
+    ) * ModifierV2AroundWeights.culture_houses
+
+    postamats_value = predict_rate(
+        form.postamats_count,
+        form.postamats_min_dest,
+        form.postamats_average_dest,
+        form.postamats_nearest_modifier,
+        form.postamats_average_modifier,
+    ) * ModifierV2AroundWeights.postamats
+
+    bus_stations_value = predict_rate(
+        form.bus_stations_count,
+        form.bus_stations_min_dest,
+        form.bus_stations_average_dest,
+        form.bus_stations_nearest_modifier,
+        form.bus_stations_average_modifier,
+    ) * ModifierV2AroundWeights.bus_stations
+
+    sports_value = predict_rate(
+        form.sports_count,
+        form.sports_min_dest,
+        form.sports_average_dest,
+        form.sports_nearest_modifier,
+        form.sports_average_modifier,
+    ) * ModifierV2AroundWeights.sports
+
+    mfc_value = predict_rate(
+        form.mfc_count,
+        form.mfc_min_dest,
+        form.mfc_average_dest,
+        form.mfc_nearest_modifier,
+        form.mfc_average_modifier,
+    ) * ModifierV2AroundWeights.mfc
+
+    nto_paper_value = calc_rate_only_by_dest(
+        form.nto_paper_count,
+        form.nto_paper_min_dest,
+        form.nto_paper_average_dest
+    ) * ModifierV2AroundWeights.nto_paper
+
+    nto_non_paper_value = calc_rate_only_by_dest(
+        form.nto_non_paper_count,
+        form.nto_non_paper_min_dest,
+        form.nto_non_paper_average_dest
+    ) * ModifierV2AroundWeights.nto_non_paper
+
+    modifier = sum([
+        state_value,
+        district_value,
+        metro_value,
+        postamats_value,
+        parking_value,
+        bus_stations_value,
+        culture_houses_value,
+        libraries_value,
+        mfc_value,
+        sports_value,
+        nto_paper_value,
+        nto_non_paper_value,
+        houses_value,
+    ]) / MODIFIER_V2_NORMALIZE
+
+    # logging.info(str([
+    #     'Modifier V2',
+    #     state_value,
+    #     district_value,
+    #     metro_value,
+    #     postamats_value,
+    #     parking_value,
+    #     bus_stations_value,
+    #     culture_houses_value,
+    #     libraries_value,
+    #     mfc_value,
+    #     sports_value,
+    #     nto_paper_value,
+    #     nto_non_paper_value,
+    #     houses_value,
+    # ]))
+
+    modifier = max(modifier, 0)
+    modifier = min(modifier, 1)
+
+    return modifier
 
 
 def calc_rate_only_by_dest(count: int, min_dest: float, average_dest: float) -> float:
@@ -289,5 +445,4 @@ def calc_rate_only_by_dest(count: int, min_dest: float, average_dest: float) -> 
                      / \
                      (count - 1 + (count + 1) // 2)
 
-    return dist_weight_average / MAX_EXPECTED_RADIUS
-
+    return 1 - dist_weight_average / MAX_EXPECTED_RADIUS

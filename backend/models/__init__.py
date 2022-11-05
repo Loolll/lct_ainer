@@ -4,6 +4,7 @@ from typing import Optional, Any
 from pydantic import BaseModel, validator
 from ast import literal_eval
 
+
 class Georaphy(BaseModel):
     lat: float
     lon: float

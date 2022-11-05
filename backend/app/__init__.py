@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 import uvicorn
 import os
 
@@ -8,7 +9,7 @@ from .routes import router
 def main():
     app = FastAPI()
     app.include_router(router)
-
+    app.mount("/share/static", StaticFiles(directory="/share/static"), name="static")
     uvicorn.run(
         app,
         host=os.environ.get('BACKEND_HOST'),

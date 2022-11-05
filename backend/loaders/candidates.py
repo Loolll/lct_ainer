@@ -42,11 +42,11 @@ async def load(pool: asyncpg.Pool):
                 logging.info(str(exc))
 
             i += 1
-            if not i % 25 or rows - i > 5:
+            if not i % 50 or rows - i > 5:
                 logging.info(f"CALCULATED CANDIDATES {type} {i/rows:.2%}")
 
         for count, object in enumerate(objects, 1):
-            if not count % 20:
+            if not count % 9:
                 await asyncio.wait(tasks)
             #
             tasks.append(loop.create_task(_load(object)))
@@ -55,29 +55,29 @@ async def load(pool: asyncpg.Pool):
             await asyncio.wait(tasks)
 
     for coro, type in zip([
-        get_all_metro(pool),
+        # get_all_metro(pool),
         get_all_postamats(pool),
-        get_all_mfc(pool),
-        get_all_sports(pool),
-        get_all_bus_stations(pool),
-        get_all_culture_houses(pool),
-        get_all_houses(pool),
-        get_all_libraries(pool),
-        get_all_nto_paper(pool),
-        get_all_nto_non_paper(pool),
-        get_all_parkings(pool),
+        # get_all_mfc(pool),
+        # get_all_sports(pool),
+        # get_all_bus_stations(pool),
+        # get_all_culture_houses(pool),
+        # get_all_houses(pool),
+        # get_all_libraries(pool),
+        # get_all_nto_paper(pool),
+        # get_all_nto_non_paper(pool),
+        # get_all_parkings(pool),
     ], [
-        CandidateType.metro,
+        # CandidateType.metro,
         CandidateType.postamat,
-        CandidateType.mfc,
-        CandidateType.sports,
-        CandidateType.bus_station,
-        CandidateType.culture_house,
-        CandidateType.house,
-        CandidateType.library,
-        CandidateType.nto_paper,
-        CandidateType.nto_non_paper,
-        CandidateType.parking,
+        # CandidateType.mfc,
+        # CandidateType.sports,
+        # CandidateType.bus_station,
+        # CandidateType.culture_house,
+        # CandidateType.house,
+        # CandidateType.library,
+        # CandidateType.nto_paper,
+        # CandidateType.nto_non_paper,
+        # CandidateType.parking,
     ]):
         objects = await coro
         logging.info(f"LOADING {type} CANDIDATES")
