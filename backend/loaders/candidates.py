@@ -56,9 +56,9 @@ async def load(pool: asyncpg.Pool):
 
     for coro, type in zip([
         # get_all_metro(pool),
-        get_all_postamats(pool),
-        # get_all_mfc(pool),
-        # get_all_sports(pool),
+        # get_all_postamats(pool),
+        get_all_mfc(pool),
+        get_all_sports(pool),
         # get_all_bus_stations(pool),
         # get_all_culture_houses(pool),
         # get_all_houses(pool),
@@ -68,9 +68,9 @@ async def load(pool: asyncpg.Pool):
         # get_all_parkings(pool),
     ], [
         # CandidateType.metro,
-        CandidateType.postamat,
-        # CandidateType.mfc,
-        # CandidateType.sports,
+        # CandidateType.postamat,
+        CandidateType.mfc,
+        CandidateType.sports,
         # CandidateType.bus_station,
         # CandidateType.culture_house,
         # CandidateType.house,

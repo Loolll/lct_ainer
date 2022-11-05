@@ -373,3 +373,19 @@ class BboxQuery(BaseModel):
 class ModifierType(str, Enum):
     modifier_v1 = 'modifier_v1'
     modifier_v2 = 'modifier_v2'
+
+
+class DistrictAutocompleteObject(BaseModel):
+    id: int
+    name: str
+
+
+DistrictAutocompleteResponse = list[DistrictAutocompleteObject]
+
+
+class StateAutocompleteObject(BaseModel):
+    abbrev: str
+    name: str
+
+
+StateAutocompleteResponse = list[StateAutocompleteObject]

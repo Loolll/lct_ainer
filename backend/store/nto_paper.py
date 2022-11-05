@@ -69,5 +69,5 @@ async def get_nearest_nto_paper(
 
 
 async def get_all_nto_paper(pool: asyncpg.Pool) -> list[NtoPaper]:
-    sql = f"SELECT {SELECTION_STRING} FROM {Tables.bus_stations}"
+    sql = f"SELECT {SELECTION_STRING} FROM {Tables.nto_paper}"
     return [_parse_nto_paper(x) for x in await pool.fetch(sql)]

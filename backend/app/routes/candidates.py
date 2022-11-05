@@ -57,9 +57,18 @@ async def export_candidates(
 
     path = f'/share/static/{uuid4()}.csv'
     with open(path, 'w') as file:
-        keys = candidates[0].dict().keys()
+        keys = ['№', 'point_lat', 'point_lon'] + [
+            k for k in candidates[0].dict().keys()
+            if k not in ['point', ]
+        ]
+
         writer = csv.DictWriter(file, keys)
         writer.writeheader()
-        writer.writerows([x.dict() for x in candidates])
+        for i, x in enumerate(candidates, 1):
+            obj = x.dict()
+            obj['№'] = i
+            point = obj.pop('point')
+            obj['point_lat'], obj['point_lon'] = point['lat'], point['lon']
+            writer.writerow(obj)
 
     return {'link': path}

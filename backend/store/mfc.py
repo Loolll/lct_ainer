@@ -70,5 +70,5 @@ async def get_nearest_mfc(
 
 
 async def get_all_mfc(pool: asyncpg.Pool) -> list[Mfc]:
-    sql = f"SELECT {SELECTION_STRING} FROM {Tables.bus_stations}"
+    sql = f"SELECT {SELECTION_STRING} FROM {Tables.mfc}"
     return [_parse_mfc(x) for x in await pool.fetch(sql)]

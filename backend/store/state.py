@@ -2,8 +2,11 @@ import asyncpg
 from asyncpg import Record
 
 from misc.db import Tables
-from models import StateForm, State, from_postgis_polygons, to_postgis_polygons, to_postgis_point, Georaphy, \
-    to_postgis_poly
+from misc.tools import autocomplete
+from models import StateForm, State, from_postgis_polygons, \
+    to_postgis_polygons, \
+    Georaphy, \
+    to_postgis_poly, StateAutocompleteObject, StateAutocompleteResponse
 from exceptions import StateNotFoundedError
 
 
@@ -66,3 +69,19 @@ async def get_bbox_states(
           f"WHERE ST_INTERSECTS($1, polygons)"
     records = await pool.fetch(sql, to_postgis_poly(poly))
     return [_parse_state(x) for x in records]
+
+
+async def autocomplete_states(
+        pool: asyncpg.Pool,
+        query: str
+) -> StateAutocompleteResponse:
+    sql = f"SELECT abbrev, name FROM {Tables.states}"
+    records = await pool.fetch(sql)
+
+    all = [StateAutocompleteObject.parse_obj(dict(record)) for record in records]
+    names = [x.name for x in all]
+    keys = [x.abbrev for x in all]
+
+    result_abbrevs = autocomplete(query, names, keys)
+
+    return [x for x in all if x.abbrev in result_abbrevs]
