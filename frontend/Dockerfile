@@ -15,8 +15,5 @@ RUN npm install -g serve
 
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
-EXPOSE 3000
 
-RUN npm run build
 
-CMD serve -s build

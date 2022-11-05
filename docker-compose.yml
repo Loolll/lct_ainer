@@ -19,11 +19,13 @@ services:
             - ./backend/datasets:/datasets/
         network_mode: host
 
-    frontend:
+    build_frontend:
         build:
             context: frontend
             dockerfile: ./Dockerfile
-        restart: always
+        command: npm run build
+        volumes:
+            - ./frontend/build:/frontend/build
         network_mode: host
 
     backend:
