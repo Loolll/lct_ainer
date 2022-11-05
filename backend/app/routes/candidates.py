@@ -1,59 +1,46 @@
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends
-from fastapi.responses import StreamingResponse, FileResponse, Response
 from asyncpg import Pool
 import csv
-from io import BytesIO, StringIO
 
 from misc.db import get_db
 from store import candidates as store
-from models import Candidate, BboxQuery, Georaphy, MapCandidate, HeatmapCandidate, ModifierType
+from models import CandidateFilter,\
+    Georaphy, MapCandidate
 from services import candidates
 
 router = APIRouter(tags=['Candidates'])
 
 
-@router.post(path='/bbox', response_model=list[MapCandidate])
-async def get_by_bbox_candidates(
-        bbox: BboxQuery,
+@router.post(path='/filter', response_model=list[MapCandidate])
+async def get_candidates_by_filter(
+        query: CandidateFilter,
         pool: Pool = Depends(get_db)
 ):
-    return await store.get_bbox_map_candidates(pool, poly=bbox.to_poly())
+    return await store.get_bbox_map_candidates(pool, filter=query)
 
 
-@router.post(path='/calc', response_model=Candidate)
+@router.post(path='/calc', response_model=MapCandidate)
 async def calc_new_candidate(
         point: Georaphy,
         radius: float = 400,
         pool: Pool = Depends(get_db)
 ):
-    return await candidates.get_point_candidate(
+    candidate = await candidates.get_point_candidate(
         pool=pool,
         radius=radius,
         point=point
     )
-
-
-@router.post(path='/heatmap', response_model=list[HeatmapCandidate])
-async def get_candidates_heatmap(
-        bbox: BboxQuery,
-        pool: Pool = Depends(get_db),
-        modifier_type: ModifierType = ModifierType.modifier_v1
-):
-    return await store.get_bbox_heatmap_candidates(
-        pool=pool,
-        poly=bbox.to_poly(),
-        modifier_type=modifier_type
-    )
+    return MapCandidate.from_full(candidate)
 
 
 @router.post(path='/export')
 async def export_candidates(
-        bbox: BboxQuery,
+        query: CandidateFilter,
         pool: Pool = Depends(get_db),
 ):
-    candidates = await store.get_bbox_map_candidates(pool, poly=bbox.to_poly())
+    candidates = await store.get_bbox_map_candidates(pool, filter=query)
 
     path = f'/share/static/{uuid4()}.csv'
     with open(path, 'w') as file:

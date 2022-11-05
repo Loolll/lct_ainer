@@ -4,8 +4,8 @@ from asyncpg import Record
 from misc.db import Tables
 from misc.colors import get_color_grad
 from models import CandidateForm, Candidate, \
-    to_postgis_point, Georaphy, Nearest, ModifierType, \
-    to_postgis_poly, MapCandidate, HeatmapCandidate
+    to_postgis_point, Georaphy, Nearest, \
+    to_postgis_poly, MapCandidate, CandidateFilter
 from exceptions import CandidateNotFounded
 from store.bases import get_nearest
 
@@ -32,7 +32,12 @@ def _parse_candidate(
 
 def _parse_map_candidate(record: Record) -> MapCandidate:
     items = dict(record.items())
+
     items['point'] = Georaphy(lat=items.pop('point_lat'), lon=items.pop('point_lon'))
+
+    items['color_v1'] = get_color_grad(items['modifier_v1'])
+    items['color_v2'] = get_color_grad(items['modifier_v2'])
+
     return MapCandidate.parse_obj(items)
 
 
@@ -81,30 +86,22 @@ async def create_candidate(
 
 async def get_bbox_map_candidates(
         pool: asyncpg.Pool,
-        poly: list[Georaphy]
+        filter: CandidateFilter
 ) -> list[MapCandidate]:
     sql = f"SELECT {MAP_CANDIDATE_SELECTION_STRING} FROM {Tables.candidates} " \
-          f"WHERE ST_CONTAINS($1, point)"
-    records = await pool.fetch(sql, to_postgis_poly(poly))
+          f"WHERE ST_CONTAINS($1, point) "
+    values = [to_postgis_poly(filter.to_poly())]
+
+    if filter.abbrev_ao:
+        sql += " AND abbrev_ao = $2 "
+        values.append(filter.abbrev_ao)
+
+    if filter.districts_ids:
+        sql += " AND district_id in $3"
+        values.append(filter.districts_ids)
+
+    records = await pool.fetch(sql, *values)
     return [_parse_map_candidate(x) for x in records]
-
-
-async def get_bbox_heatmap_candidates(
-        pool: asyncpg.Pool,
-        poly: list[Georaphy],
-        modifier_type: ModifierType = ModifierType.modifier_v1
-) -> list[HeatmapCandidate]:
-    candidates = await get_bbox_map_candidates(pool, poly=poly)
-    return [
-        HeatmapCandidate(
-            **x.dict(),
-            color=get_color_grad(
-                x.modifier_v2
-                if modifier_type == ModifierType.modifier_v2 else
-                x.modifier_v1
-            )
-        ) for x in candidates
-    ]
 
 
 async def get_nearest_candidate(

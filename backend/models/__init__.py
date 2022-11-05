@@ -4,6 +4,8 @@ from typing import Optional, Any
 from pydantic import BaseModel, validator
 from ast import literal_eval
 
+from misc.colors import get_color_grad
+
 
 class Georaphy(BaseModel):
     lat: float
@@ -332,21 +334,27 @@ class MapCandidate(BaseModel):
     calculated_radius: float
     modifier_v1: float
     modifier_v2: float
-
-
-class HeatmapCandidate(MapCandidate):
-    color: str
+    color_v1: str
+    color_v2: str
 
     @staticmethod
     def get_hex_color(r: int, g: int, b: int) -> str:
         return f'#{hex(r)[2:]}{hex(g)[2:]}{hex(b)[2:]}'
 
-    @validator('color', pre=True)
+    @validator('color_v1', 'color_v2', pre=True)
     def _validate_color(cls, value: str | list) -> str:
         if type(value) is list:
-            return HeatmapCandidate.get_hex_color(*value)
+            return MapCandidate.get_hex_color(*value)
         else:
             return value
+
+    @classmethod
+    def from_full(cls, obj: Candidate) -> 'MapCandidate':
+        return MapCandidate(
+            **obj.dict(),
+            color_v1=get_color_grad(obj.modifier_v1),
+            color_v2=get_color_grad(obj.modifier_v2),
+        )
 
 
 class Nearest(BaseModel):
@@ -370,9 +378,9 @@ class BboxQuery(BaseModel):
         ]
 
 
-class ModifierType(str, Enum):
-    modifier_v1 = 'modifier_v1'
-    modifier_v2 = 'modifier_v2'
+class CandidateFilter(BboxQuery):
+    abbrev_ao: Optional[str]
+    districts_ids: Optional[list[int]]
 
 
 class DistrictAutocompleteObject(BaseModel):
