@@ -118,8 +118,8 @@ async def get_nearest_candidate(
     )
 
 
-async def get_all_loaded_candidates(pool: asyncpg.Pool) -> list[(Georaphy, CandidateType)]:
+async def get_all_loaded_candidates(pool: asyncpg.Pool) -> list[(float, float, CandidateType)]:
     sql = f"SELECT ST_X(point) as point_lat, ST_Y(point) as point_lon, type FROM {Tables.candidates}"
     records = await pool.fetch(sql)
 
-    return [(Georaphy(lat=r['point_lat'], lon=r['point_lon']), r['type']) for r in records]
+    return [(r['point_lat'], r['point_lon'], r['type']) for r in records]
