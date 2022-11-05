@@ -97,8 +97,7 @@ async def get_bbox_map_candidates(
         values.append(filter.abbrev_ao)
 
     if filter.districts_ids:
-        sql += " AND district_id in $3"
-        values.append(filter.districts_ids)
+        sql += f" AND district_id IN ({','.join(map(str, filter.districts_ids))}) "
 
     records = await pool.fetch(sql, *values)
     return [_parse_map_candidate(x) for x in records]
