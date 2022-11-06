@@ -345,7 +345,7 @@ class MapCandidate(BaseModel):
 
     @staticmethod
     def get_hex_color(r: int, g: int, b: int) -> str:
-        return f'#{hex(r)[2:]}{hex(g)[2:]}{hex(b)[2:]}'
+        return f'#{hex(r)[2:].zfill(2)}{hex(g)[2:].zfill(2)}{hex(b)[2:].zfill(2)}'
 
     @validator('color_v1', 'color_v2', pre=True)
     def _validate_color(cls, value: str | list) -> str:
