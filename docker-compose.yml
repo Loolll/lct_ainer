@@ -7,7 +7,7 @@ services:
             - DATABASE_URL=${DB_DEST}?sslmode=disable
         network_mode: host
 
-    loader:
+    loaders:
         build:
             context: backend
             dockerfile: ./etc/python.Dockerfile
