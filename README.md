@@ -3,7 +3,7 @@
 - https://posta-map.ru/ - главная страница
 - https://posta-map.ru/openapi.json - конфигурация свагера
 - https://posta-map.ru/docs - свагер
-- https://disk.yandex.ru/d/Y7HtHY_975v88g - дадасеты
+- https://disk.yandex.ru/d/Y7HtHY_975v88g - датасеты
 - TODO презентация
 
 ### Описание
