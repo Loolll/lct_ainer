@@ -40,7 +40,7 @@ async def export_candidates(
         query: CandidateFilter,
         pool: Pool = Depends(get_db),
 ):
-    candidates = await store.get_bbox_map_candidates(pool, filter=query)
+    candidates = await store.get_bbox_map_candidates(pool, filter=query, aggregate=False)
 
     name = f'{uuid4()}.csv'
     path = f'/share/static/{name}'
@@ -49,7 +49,7 @@ async def export_candidates(
     with open(path, 'w') as file:
         keys = ['№', 'point_lat', 'point_lon'] + [
             k for k in candidates[0].dict().keys()
-            if k not in ['point', ]
+            if k not in ['point', 'aggregation_radius', 'count']
         ]
 
         writer = csv.DictWriter(file, keys)
@@ -59,6 +59,8 @@ async def export_candidates(
             obj['№'] = i
             point = obj.pop('point')
             obj['point_lat'], obj['point_lon'] = point['lat'], point['lon']
+            obj.pop('count')
+            obj.pop('aggregation_radius')
             writer.writerow(obj)
 
     return {'link': link}

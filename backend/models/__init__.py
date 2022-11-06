@@ -18,6 +18,10 @@ class Georaphy(BaseModel):
     def from_json(cls, json: dict) -> 'Georaphy':
         return cls(lat=json['lat'], lon=json['lon'])
 
+    def distance_metres(self, another: 'Georaphy') -> float:
+        geog_dist = ((self.lon - another.lon)**2 + (self.lat - another.lat)**2)**0.5
+        return geog_dist * 66918.235
+
 
 GeographyPolygon = list[Georaphy]
 
@@ -325,21 +329,23 @@ class Candidate(CandidateForm):
 
 
 class MapCandidate(BaseModel):
-    id: int
-    abbrev_ao: str
-    district_id: int
+    id: Optional[int]
+    abbrev_ao: Optional[str]
+    district_id: Optional[int]
     point: Georaphy
     address: Optional[str]
-    type: CandidateType
-    calculated_radius: float
+    type: Optional[CandidateType]
+    calculated_radius: Optional[float]
+    aggregation_radius: Optional[float]
     modifier_v1: float
     modifier_v2: float
     color_v1: str
     color_v2: str
+    count: int = 1
 
     @staticmethod
     def get_hex_color(r: int, g: int, b: int) -> str:
-        return f'#{hex(r)[2:]}{hex(g)[2:]}{hex(b)[2:]}'
+        return f'#{hex(r)[2:].zfill(2)}{hex(g)[2:].zfill(2)}{hex(b)[2:].zfill(2)}'
 
     @validator('color_v1', 'color_v2', pre=True)
     def _validate_color(cls, value: str | list) -> str:

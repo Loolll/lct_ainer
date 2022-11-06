@@ -18,20 +18,20 @@ from .candidates import load as load_candidates
 async def main():
     pool = await get_db()
 
-    # await load_states(pool)
-    # await load_districts(pool)
-    # await load_metro(pool)
-    # await load_postamat(pool)
-    # await load_parking(pool)
-    # await load_bus_stations(pool)
-    # await load_culture_house(pool)
-    # await load_libraries(pool)
-    # await load_sports(pool)
-    # await load_nto_paper(pool)
-    # await load_nto_non_paper(pool)
-    # await load_mfc(pool)
+    await load_states(pool)
+    await load_districts(pool)
+    await load_metro(pool)
+    await load_postamat(pool)
+    await load_parking(pool)
+    await load_bus_stations(pool)
+    await load_culture_house(pool)
+    await load_libraries(pool)
+    await load_sports(pool)
+    await load_nto_paper(pool)
+    await load_nto_non_paper(pool)
+    await load_mfc(pool)
 
-    # from .houses import load as load_houses
-    # await load_houses(pool)
+    from .houses import load as load_houses
+    await load_houses(pool)
 
     await load_candidates(pool)

@@ -1,6 +1,7 @@
 import asyncio
 import asyncpg
 from contextlib import suppress
+from misc.consts import BASE_CALCULATED_RADIUS
 
 from models import CandidateType
 from services import candidates as services
@@ -13,8 +14,6 @@ from exceptions import *
 import logging
 
 logging.basicConfig(encoding='utf-8', level=logging.INFO)
-
-CALCULATED_RADIUS = 400
 
 
 async def load(pool: asyncpg.Pool):
@@ -41,7 +40,7 @@ async def load(pool: asyncpg.Pool):
                 with suppress(DistrictNotFoundedError):
                     await services.calc_candidate(
                         pool=pool,
-                        radius=CALCULATED_RADIUS,
+                        radius=BASE_CALCULATED_RADIUS,
                         point=obj.point,
                         type=type,
                         proto=obj
