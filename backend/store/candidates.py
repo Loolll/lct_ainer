@@ -36,7 +36,7 @@ def _parse_candidate(
 
 def _parse_map_candidate(
         record: Record,
-        calc_rad: float = None,
+        aggregation_rad: float = None,
         without_count: bool = True
 ) -> MapCandidate:
     items = dict(record.items())
@@ -45,8 +45,8 @@ def _parse_map_candidate(
 
     items['color_v1'] = get_color_grad(items['modifier_v1'])
     items['color_v2'] = get_color_grad(items['modifier_v2'])
-    if calc_rad:
-        items['calculated_radius'] = calc_rad
+    if aggregation_rad:
+        items['aggregation_radius'] = aggregation_rad
     if without_count:
         items['count'] = 1
 
@@ -155,11 +155,11 @@ async def get_bbox_map_candidates(
                     {int(max(1, (count / MAX_SCREEN_CANDIDATES)))},                      
                     max_radius := {aggregate_radius}
                 ) over () as cid FROM {Tables.candidates} WHERE {filter_string}) as x GROUP BY cid """
-        print(sql)
         records = await pool.fetch(sql, *values)
         return [
             _parse_map_candidate(
-                x, calc_rad=aggregate_radius,
+                x,
+                aggregation_rad=aggregate_radius,
                 without_count=False
             ) for x in records
         ]

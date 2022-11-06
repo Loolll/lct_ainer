@@ -49,7 +49,7 @@ async def export_candidates(
     with open(path, 'w') as file:
         keys = ['№', 'point_lat', 'point_lon'] + [
             k for k in candidates[0].dict().keys()
-            if k not in ['point', ]
+            if k not in ['point', 'aggregation_radius', 'count']
         ]
 
         writer = csv.DictWriter(file, keys)

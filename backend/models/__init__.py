@@ -335,7 +335,8 @@ class MapCandidate(BaseModel):
     point: Georaphy
     address: Optional[str]
     type: Optional[CandidateType]
-    calculated_radius: float
+    calculated_radius: Optional[float]
+    aggregation_radius: Optional[float]
     modifier_v1: float
     modifier_v2: float
     color_v1: str
