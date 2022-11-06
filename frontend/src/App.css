@@ -1,19 +1,35 @@
-.custom-menu-btn {
+.custom-menu-btn, .custom-export {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 85px;
-  left: 10px;
   z-index: 999;
   background-color: #fff;
   background-clip: padding-box;
   border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 6px;
+  border-radius: 2px;
   cursor: pointer;
+}
+
+.custom-menu-btn {
+  top: 130px;
+  left: 10px;
+}
+
+.custom-export {
+  left: 10px;
+  top: 175px;
 }
 
 .custom-menu {
   width: 300px;
   padding: 10px;
+}
+
+.leaflet-control-simpleMapScreenshoter a {
+  background-position: center;
+}
+
+.leaflet-bottom.leaflet-right .leaflet-control-attribution.leaflet-control svg {
+  display: none !important;
 }

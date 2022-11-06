@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { getAllStates, getStatesBbox, searchStates } from '../../api/states'
 import { BboxRequestParams, RootState, SearchRequestParams } from '../../interfaces/common'
+import { DrawingElementsPropsRefGetBboxStatesParams } from '../../interfaces/drawingElements'
 import { StateItem, StatesState } from '../../interfaces/states'
 
 const initialState: StatesState = {
@@ -17,13 +18,13 @@ export const statesThunk = {
       .catch((err) => rejectWithValue(err))
     }
   ),
-  getBbox: createAsyncThunk<StateItem[], BboxRequestParams, { state: RootState }>(
+  getBbox: createAsyncThunk<StateItem[], BboxRequestParams & DrawingElementsPropsRefGetBboxStatesParams, { state: RootState }>(
     'states/getBbox',
     async (data, { getState, rejectWithValue }) => {
       const state = getState()
       return await getStatesBbox({
         ...data,
-        abbrev_ao: state.states.abbrevFilter
+        abbrev_ao: data.hasOwnProperty('abbrevFilter') ? data.abbrevFilter : state.states.abbrevFilter
       })
       .then((response) => response.data)
       .catch((err) => rejectWithValue(err))
