@@ -141,7 +141,7 @@ async def get_bbox_map_candidates(
     filter_string += " ST_CONTAINS($1, point) "
 
     count = (await pool.fetchrow(sql_count + filter_string, *values))['c']
-    aggregate_radius = min(700, BASE_CALCULATED_RADIUS * max(1, (count / MAX_SCREEN_CANDIDATES)))
+    aggregate_radius = min(1200, BASE_CALCULATED_RADIUS * max(1, (count / MAX_SCREEN_CANDIDATES)))
 
     if not aggregate or (aggregate_radius <= BASE_CALCULATED_RADIUS + 1):
         sql = f'SELECT {MAP_CANDIDATE_SELECTION_STRING} FROM {Tables.candidates} WHERE '
