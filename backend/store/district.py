@@ -110,4 +110,7 @@ async def autocomplete_districts(
 
     result_ids = autocomplete(query, names, keys)
 
-    return [x for x in all if x.id in result_ids]
+    return [
+        DistrictAutocompleteObject(id=x.id, name=x.name.capitalize())
+        for x in all if x.id in result_ids
+    ]
