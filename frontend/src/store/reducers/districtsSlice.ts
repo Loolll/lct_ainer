@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { getAllDistricts, getDistrictsBbox, searchDistricts } from '../../api/districts'
 import { BboxRequestParams, RootState, SearchRequestParams } from '../../interfaces/common'
 import { DistrictItem, DistrictState } from '../../interfaces/districts'
+import { DrawingElementsPropsRefGetBboxStatesParams } from '../../interfaces/drawingElements'
 
 const initialState: DistrictState = {
   districts: [],
@@ -17,13 +18,13 @@ export const districtsThunk = {
       .catch((err) => rejectWithValue(err))
     }
   ),
-  getBbox: createAsyncThunk<DistrictItem[], BboxRequestParams, { state: RootState }>(
+  getBbox: createAsyncThunk<DistrictItem[], BboxRequestParams & DrawingElementsPropsRefGetBboxStatesParams, { state: RootState }>(
     'districts/getBbox',
     async (data, { getState, rejectWithValue }) => {
       const state = getState()
       return await getDistrictsBbox({
         ...data,
-        districts_ids: state.districts.districts_ids
+        districts_ids: data.hasOwnProperty('districts_ids') ? (data.districts_ids || []) : state.districts.districts_ids
       })
       .then((response) => response.data)
       .catch((err) => rejectWithValue(err))

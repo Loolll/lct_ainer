@@ -1,9 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { MapState } from '../../interfaces/map'
 
+// 55.752794, 37.620845
 const initialState: MapState = {
-  center: [55.558741, 37.378847],
-  zoom: 13
+  center: [55.752794, 37.620845],
+  zoom: 13,
+  bounds: {
+    lb_point: null,
+    lu_point: null,
+    rb_point: null,
+    ru_point: null
+  }
 }
 
 export const mapSlice = createSlice({
@@ -15,11 +22,14 @@ export const mapSlice = createSlice({
     },
     setZoom (state, action) {
       state.zoom = action.payload
+    },
+    setBounds (state, action) {
+      state.bounds = action.payload
     }
   }
 })
 
 
-export const { setCenter, setZoom } = mapSlice.actions
+export const { setCenter, setZoom, setBounds } = mapSlice.actions
 
 export default mapSlice.reducer

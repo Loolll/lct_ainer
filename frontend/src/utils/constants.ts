@@ -1,76 +1,117 @@
+import { CandidateItemType } from "../interfaces/candidates";
 import { PaletteItem } from "../interfaces/common";
 
 export const palette: PaletteItem[] = [
   {
-    name: 'primary.light',
-    color: '#42a5f5'
+    color: '#00a1ff'
   },
   {
-    name: 'primary.main',
-    color: '#1976d2'
+    color: '#00c3d0'
   },
   {
-    name: 'primary.dark',
-    color: '#1565c0'
+    color: '#93d472'
   },
   {
-    name: 'secondary.light',
-    color: '#ba68c8'
+    color: '#ffce8d'
   },
   {
-    name: 'secondary.main',
-    color: '#9c27b0'
+    color: '#ffccf8'
   },
   {
-    name: 'secondary.dark',
-    color: '#7b1fa2'
+    color: '#a51f81'
   },
   {
-    name: 'error.light',
-    color: '#ef5350'
+    color: '#d54b65'
   },
   {
-    name: 'error.main',
-    color: '#d32f2f'
+    color: '#ef9b6b'
   },
   {
-    name: 'error.dark',
-    color: '#c62828'
+    color: '#f6e2a0'
   },
   {
-    name: 'warning.light',
-    color: '#ff9800'
+    color: '#f3efda'
   },
   {
-    name: 'warning.main',
-    color: '#ed6c02'
+    color: '#a587d1'
   },
   {
-    name: 'warning.dark',
-    color: '#e65100'
+    color: '#2b9fc9'
   },
   {
-    name: 'info.light',
-    color: '#03a9f4'
+    color: '#4dbfaa'
   },
   {
-    name: 'info.main',
-    color: '#0288d1'
+    color: '#e5e5b3'
   },
   {
-    name: 'info.dark',
-    color: '#01579b'
+    color: '#ededdb'
   },
   {
-    name: 'success.light',
-    color: '#4caf50'
+    color: '#e984ff'
   },
   {
-    name: 'success.main',
-    color: '#2e7d32'
+    color: '#ff6cc4'
   },
   {
-    name: 'success.dark',
-    color: '#1b5e20'
+    color: '#ffab81'
   },
+  {
+    color: '#ffe884'
+  },
+  {
+    color: '#dcffb2'
+  }
+]
+
+export const typesCandidates = [
+  {
+    id: CandidateItemType.ANY,
+    name: 'Любой'
+  },
+  {
+    id: CandidateItemType.BUS_STATION,
+    name: 'Автобусная остановка'
+  },
+  {
+    id: CandidateItemType.CULTURE_HOUSE,
+    name: 'Дом культуры'
+  },
+  {
+    id: CandidateItemType.HOUSE,
+    name: 'Дом'
+  },
+  {
+    id: CandidateItemType.LIBRARY,
+    name: 'Библиотека'
+  },
+  {
+    id: CandidateItemType.METRO,
+    name: 'Метро'
+  },
+  {
+    id: CandidateItemType.MFC,
+    name: 'МФЦ'
+  },
+  {
+    id: CandidateItemType.NTO_NON_PAPER,
+    name: 'НТО остальные'
+  },
+  {
+    id: CandidateItemType.NTO_PAPER,
+    name: 'НТО бумажные'
+  },
+  {
+    id: CandidateItemType.PARKING,
+    name: 'Парковка'
+  },
+  {
+    id: CandidateItemType.POSTAMAT,
+    name: 'Постамат'
+  },
+  {
+    id: CandidateItemType.SPORTS,
+    name: 'Спорт'
+  },
+
 ]

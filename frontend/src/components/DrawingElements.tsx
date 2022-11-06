@@ -1,42 +1,56 @@
-import { Fragment, useEffect } from 'react'
+import { forwardRef, Fragment, memo, useEffect, useImperativeHandle } from 'react'
 import { Circle, Polygon, Popup, useMap, useMapEvents } from 'react-leaflet'
 import { BboxRequestParams } from '../interfaces/common'
+import { DrawingElementsPropsRefGetBboxStatesParams, DrawingElementsProps, DrawingElementsPropsRef } from '../interfaces/drawingElements'
 import { candidatesThunk } from '../store/reducers/candidatesSlice'
 import { districtsThunk, setDistricts, setDistrictsIds } from '../store/reducers/districtsSlice'
-import { setCenter, setZoom } from '../store/reducers/mapSlice'
+import { setFilterRate, setFilterType } from '../store/reducers/filterSlice'
+import { setBounds, setCenter, setZoom } from '../store/reducers/mapSlice'
 import { setAbbrevFilter, setStates, statesThunk } from '../store/reducers/statesSlice'
 import { useAppDispatch, useAppSelector } from '../store/store'
 import { palette } from '../utils/constants'
 import { convertLngToLon, convertLonToLng } from '../utils/helpers'
 
-const DrawingElements = () => {
+const DrawingElements = forwardRef<DrawingElementsPropsRef, DrawingElementsProps>((_, ref) => {
 
   const dispatch = useAppDispatch()
   const { states } = useAppSelector(state => state.states)
   const { districts } = useAppSelector(state => state.districts)
   const { candidates } = useAppSelector(state => state.candidates)
-  const { currentFilter } = useAppSelector(state => state.filters)
+  const { currentFilter, currentMode, currentModifier } = useAppSelector(state => state.filters)
   const map = useMap()
-  const getBboxStates = () => {
+
+  const getBboxStates = (data?: DrawingElementsPropsRefGetBboxStatesParams) => {
     const bounds = map.getBounds()
     const params: BboxRequestParams = {
+      ...data,
       lb_point: convertLngToLon(bounds.getSouthWest()),
       lu_point: convertLngToLon(bounds.getNorthWest()),
       rb_point: convertLngToLon(bounds.getSouthEast()),
       ru_point: convertLngToLon(bounds.getNorthEast())
     }
+    dispatch(setBounds(params))
     dispatch(candidatesThunk.getBbox(params))
-    if (currentFilter === 'state') {
+    if ((data?.currentFilter || currentFilter) === 'state') {
       dispatch(statesThunk.getBbox(params))
-    } else if (currentFilter === 'district') {
+    } else if ((data?.currentFilter || currentFilter) === 'district') {
       dispatch(districtsThunk.getBbox(params))
-    } else {
+    } else if ((data?.currentFilter || currentFilter) === 'none') {
       dispatch(setDistricts([]))
       dispatch(setStates([]))
       dispatch(setAbbrevFilter(''))
       dispatch(setDistrictsIds([]))
+      dispatch(setFilterType([]))
+      dispatch(setFilterRate({
+        min: 0,
+        max: 1
+      }))
     }
   }
+
+  useImperativeHandle(ref, () => ({
+    getBboxStates
+  }))
 
   useMapEvents({
     moveend: (e) => {
@@ -110,23 +124,76 @@ const DrawingElements = () => {
       }
       {
         candidates.map((candidate) => (
-          <Fragment key={candidate.id}>
-            <Circle center={convertLonToLng(candidate.point)} radius={10}>
-              <Popup>
-                <div>
-                  {
-                    candidate.address && <div>Адрес: {candidate.address}</div>
-                  }
-                  <div style={{ padding: '5px 0 5px 0' }}>Радиус расчета: {candidate.calculated_radius}м</div>
-                  <div>Тип: {candidate.type}</div>
-                </div>
-              </Popup>
-            </Circle>
+          <Fragment key={candidate.id || `${candidate.modifier_v1}${candidate.modifier_v2}`}>
+            {
+              currentMode === 'sector' && (
+                <Circle center={convertLonToLng(candidate.point)} radius={candidate.id ? 10 : candidate.aggregation_radius}>
+                  <Popup>
+                    {
+                      candidate.id && (
+                        <div>
+                          {
+                            candidate.address && <div>Адрес: {candidate.address}</div>
+                          }
+                          <div style={{ padding: '5px 0 5px 0' }}>Радиус расчета: {candidate.calculated_radius}м</div>
+                          <div>Тип: {candidate.type}</div>
+                          <div style={{ padding: '5px 0 5px 0' }}>Модификатор 1: {candidate.modifier_v1}</div>
+                          <div>Модификатор 2: {candidate.modifier_v2}</div>
+                        </div>
+                      )
+                    }
+                    {
+                      !candidate.id && (
+                        <div>
+                          { candidate.count }
+                        </div>
+                      )
+                    }
+                  </Popup>
+                </Circle>
+              )
+            }
+            {
+              currentMode === 'heat_map' && (
+                <Circle
+                  center={convertLonToLng(candidate.point)}
+                  radius={candidate.id ? 40 : candidate.aggregation_radius}
+                  pathOptions={{
+                    fillColor: currentModifier === 'modifier_v1' ? candidate.color_v1 : candidate.color_v2,
+                    fillOpacity: .5,
+                    color: currentModifier === 'modifier_v1' ? candidate.color_v1 : candidate.color_v2
+                  }}
+                >
+                  <Popup>
+                    {
+                      candidate.id && (
+                        <div>
+                          {
+                            candidate.address && <div>Адрес: {candidate.address}</div>
+                          }
+                          <div style={{ padding: '5px 0 5px 0' }}>Радиус расчета: {candidate.calculated_radius}м</div>
+                          <div>Тип: {candidate.type}</div>
+                          <div style={{ padding: '5px 0 5px 0' }}>Модификатор 1: {candidate.modifier_v1}</div>
+                          <div>Модификатор 2: {candidate.modifier_v2}</div>
+                        </div>
+                      )
+                    }
+                    {
+                      !candidate.id && (
+                        <div>
+                          { candidate.count }
+                        </div>
+                      )
+                    }
+                  </Popup>
+                </Circle>
+              )
+            }
           </Fragment>
         ))
       }
     </>
   )
-}
+})
 
-export default DrawingElements
+export default memo(DrawingElements)
