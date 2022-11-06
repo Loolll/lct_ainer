@@ -381,6 +381,10 @@ class BboxQuery(BaseModel):
 class CandidateFilter(BboxQuery):
     abbrev_ao: Optional[str]
     districts_ids: Optional[list[int]]
+    min_modifier_v1: Optional[float] = 0
+    max_modifier_v1: Optional[float] = 1
+    min_modifier_v2: Optional[float] = 0
+    max_modifier_v2: Optional[float] = 1
 
 
 class StateFilter(BboxQuery):

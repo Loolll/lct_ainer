@@ -89,15 +89,39 @@ async def get_bbox_map_candidates(
         filter: CandidateFilter
 ) -> list[MapCandidate]:
     sql = f"SELECT {MAP_CANDIDATE_SELECTION_STRING} FROM {Tables.candidates} " \
-          f"WHERE ST_CONTAINS($1, point) "
+          f"WHERE "
     values = [to_postgis_poly(filter.to_poly())]
+    ph_i = 2
 
     if filter.abbrev_ao:
-        sql += " AND abbrev_ao = $2 "
+        sql += f" abbrev_ao = ${ph_i} AND "
+        ph_i += 1
         values.append(filter.abbrev_ao)
 
+    if filter.min_modifier_v1:
+        sql += f" modifier_v1 >= ${ph_i} AND "
+        ph_i += 1
+        values.append(filter.min_modifier_v1)
+
+    if filter.min_modifier_v2:
+        sql += f" modifier_v2 >= ${ph_i} AND "
+        ph_i += 1
+        values.append(filter.min_modifier_v2)
+
+    if filter.max_modifier_v2:
+        sql += f" modifier_v2 <= ${ph_i} AND "
+        ph_i += 1
+        values.append(filter.max_modifier_v2)
+
+    if filter.max_modifier_v1:
+        sql += f" modifier_v1 <= ${ph_i} AND "
+        ph_i += 1
+        values.append(filter.max_modifier_v1)
+
     if filter.districts_ids:
-        sql += f" AND district_id IN ({','.join(map(str, filter.districts_ids))}) "
+        sql += f" district_id IN ({','.join(map(str, filter.districts_ids))}) AND "
+
+    sql += " ST_CONTAINS($1, point) "
 
     records = await pool.fetch(sql, *values)
     return [_parse_map_candidate(x) for x in records]
