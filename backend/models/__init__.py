@@ -385,6 +385,7 @@ class CandidateFilter(BboxQuery):
     max_modifier_v1: Optional[float] = 1
     min_modifier_v2: Optional[float] = 0
     max_modifier_v2: Optional[float] = 1
+    types: Optional[list[CandidateType]]
 
 
 class StateFilter(BboxQuery):

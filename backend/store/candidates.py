@@ -118,6 +118,10 @@ async def get_bbox_map_candidates(
         ph_i += 1
         values.append(filter.max_modifier_v1)
 
+    if filter.types:
+        f = lambda x: f'\'{x}\''
+        sql += f" type IN ('any', {','.join(map(f, filter.types))}) AND "
+
     if filter.districts_ids:
         sql += f" district_id IN ({','.join(map(str, filter.districts_ids))}) AND "
 
