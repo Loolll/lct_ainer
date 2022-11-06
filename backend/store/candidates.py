@@ -152,7 +152,7 @@ async def get_bbox_map_candidates(
                 point, modifier_v1, modifier_v2,
                 ST_ClusterKMeans(
                     point,
-                    {int(max(1, (count / MAX_SCREEN_CANDIDATES))) * 10},                      
+                    {int(max(1, (count / MAX_SCREEN_CANDIDATES)))},                      
                     max_radius := {aggregate_radius}
                 ) over () as cid FROM {Tables.candidates} WHERE {filter_string}) as x GROUP BY cid """
         print(sql)
