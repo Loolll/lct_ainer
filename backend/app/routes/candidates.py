@@ -40,7 +40,7 @@ async def export_candidates(
         query: CandidateFilter,
         pool: Pool = Depends(get_db),
 ):
-    candidates = await store.get_bbox_map_candidates(pool, filter=query)
+    candidates = await store.get_bbox_map_candidates(pool, filter=query, aggregate=False)
 
     name = f'{uuid4()}.csv'
     path = f'/share/static/{name}'

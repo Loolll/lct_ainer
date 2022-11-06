@@ -18,6 +18,10 @@ class Georaphy(BaseModel):
     def from_json(cls, json: dict) -> 'Georaphy':
         return cls(lat=json['lat'], lon=json['lon'])
 
+    def distance_metres(self, another: 'Georaphy') -> float:
+        geog_dist = ((self.lon - another.lon)**2 + (self.lat - another.lat)**2)**0.5
+        return geog_dist * 66918.235
+
 
 GeographyPolygon = list[Georaphy]
 
@@ -325,17 +329,18 @@ class Candidate(CandidateForm):
 
 
 class MapCandidate(BaseModel):
-    id: int
-    abbrev_ao: str
-    district_id: int
+    id: Optional[int]
+    abbrev_ao: Optional[str]
+    district_id: Optional[int]
     point: Georaphy
     address: Optional[str]
-    type: CandidateType
+    type: Optional[CandidateType]
     calculated_radius: float
     modifier_v1: float
     modifier_v2: float
     color_v1: str
     color_v2: str
+    count: int = 1
 
     @staticmethod
     def get_hex_color(r: int, g: int, b: int) -> str:
