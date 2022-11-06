@@ -4,7 +4,7 @@
 - https://posta-map.ru/openapi.json - конфигурация свагера
 - https://posta-map.ru/docs - свагер
 - https://disk.yandex.ru/d/Y7HtHY_975v88g - датасеты
-- TODO презентация
+- https://disk.yandex.ru/d/AuP16fsHNOOeHw - презентация
 
 ### Описание
 Приложение позволяет выборать оптимальные точки размещения постаматов.
