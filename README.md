@@ -22,7 +22,7 @@
 - backend/app.py, backend/app/ - FastAPI приложение
 - backend/load_data.py, backend/loaders - Загрузчики данных
 - backend/datasets/data_src - входные датасеты, с которыми работают загрузчики. 
-**Обратить внимание! Дадасеты в репозиторий не включены, 
+**Обратить внимание! Датасеты в репозиторий не включены, 
 поскольку гитхаб не дает заливать столь большие файлы.
 Их стоит скачать с яндекс диска https://disk.yandex.ru/d/Y7HtHY_975v88g и распаковать архив в backend/datasets/data_src**
 - backend/datasets/extrapolated_houses.json - результат работы нейросети, которая экстраполировала данные жилых домов.
