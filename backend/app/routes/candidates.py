@@ -59,6 +59,8 @@ async def export_candidates(
             obj['№'] = i
             point = obj.pop('point')
             obj['point_lat'], obj['point_lon'] = point['lat'], point['lon']
+            obj.pop('count')
+            obj.pop('aggregation_radius')
             writer.writerow(obj)
 
     return {'link': link}
