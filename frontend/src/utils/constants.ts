@@ -3,64 +3,76 @@ import { PaletteItem } from "../interfaces/common";
 
 export const palette: PaletteItem[] = [
   {
-    color: '#00a1ff'
+    color: '#800000'
   },
   {
-    color: '#00c3d0'
+    color: '#A52A2A'
   },
   {
-    color: '#93d472'
+    color: '#A0522D'
   },
   {
-    color: '#ffce8d'
+    color: '#8B4513'
   },
   {
-    color: '#ffccf8'
+    color: '#D2691E'
   },
   {
-    color: '#a51f81'
+    color: '#B8860B'
   },
   {
-    color: '#d54b65'
+    color: '#CD853F'
   },
   {
-    color: '#ef9b6b'
+    color: '#4B0082'
   },
   {
-    color: '#f6e2a0'
+    color: '#8B008B'
   },
   {
-    color: '#f3efda'
+    color: '#FF00FF'
   },
   {
-    color: '#a587d1'
+    color: '#8A2BE2'
   },
   {
-    color: '#2b9fc9'
+    color: '#483D8B'
   },
   {
-    color: '#4dbfaa'
+    color: '#191970'
   },
   {
-    color: '#e5e5b3'
+    color: '#00008B'
   },
   {
-    color: '#ededdb'
+    color: '#4682B4'
   },
   {
-    color: '#e984ff'
+    color: '#00CED1'
   },
   {
-    color: '#ff6cc4'
+    color: '#5F9EA0'
   },
   {
-    color: '#ffab81'
+    color: '#FF4500'
   },
   {
-    color: '#ffe884'
+    color: '#FF7F50'
   },
   {
-    color: '#dcffb2'
+    color: '#2E8B57'
+  },
+  {
+    color: '#006400'
+  },
+  {
+    color: '#808000'
+  },
+  {
+    color: '#008B8B'
+  },
+  {
+    color: '#00FF00'
   }
 ]
 

@@ -1,5 +1,5 @@
 import { forwardRef, Fragment, memo, useEffect, useImperativeHandle } from 'react'
-import { Circle, Polygon, Popup, useMap, useMapEvents } from 'react-leaflet'
+import { Circle, Polygon, Popup, Tooltip, useMap, useMapEvents } from 'react-leaflet'
 import { BboxRequestParams } from '../interfaces/common'
 import { DrawingElementsPropsRefGetBboxStatesParams, DrawingElementsProps, DrawingElementsPropsRef } from '../interfaces/drawingElements'
 import { candidatesThunk } from '../store/reducers/candidatesSlice'
@@ -81,7 +81,7 @@ const DrawingElements = forwardRef<DrawingElementsPropsRef, DrawingElementsProps
                   key={`polygon-${index}-${polygonIndex}`}
                   positions={polygonWithLng}
                   pathOptions={{
-                    color: palette[index]?.color || ''
+                    color: palette.at(index)?.color || ''
                   }}
                 >
                   <Popup>
@@ -99,7 +99,7 @@ const DrawingElements = forwardRef<DrawingElementsPropsRef, DrawingElementsProps
       }
       {
         currentFilter === 'district' &&
-        districts.map((district) => {
+        districts.map((district, index) => {
           const polygonWithLng = district.polygon.map((item) => {
             return convertLonToLng(item)
           })
@@ -108,6 +108,9 @@ const DrawingElements = forwardRef<DrawingElementsPropsRef, DrawingElementsProps
               <Polygon
                 key={district.id}
                 positions={polygonWithLng}
+                pathOptions={{
+                  color: palette.at(index)?.color || ''
+                }}
               >
                 <Popup>
                   <div>
@@ -117,7 +120,6 @@ const DrawingElements = forwardRef<DrawingElementsPropsRef, DrawingElementsProps
                   </div>
                 </Popup>
               </Polygon>
-              <Circle center={convertLonToLng(district.center)} radius={100} />
             </Fragment>
           )
         })
@@ -127,29 +129,38 @@ const DrawingElements = forwardRef<DrawingElementsPropsRef, DrawingElementsProps
           <Fragment key={candidate.id || `${candidate.modifier_v1}${candidate.modifier_v2}`}>
             {
               currentMode === 'sector' && (
-                <Circle center={convertLonToLng(candidate.point)} radius={candidate.id ? 10 : candidate.aggregation_radius}>
-                  <Popup>
+                <Circle
+                  center={convertLonToLng(candidate.point)}
+                  radius={candidate.id ? 10 : candidate.aggregation_radius}
+                  pathOptions={{
+                    fillColor: currentModifier === 'modifier_v1' ? candidate.color_v1 : candidate.color_v2,
+                    color: currentModifier === 'modifier_v1' ? candidate.color_v1 : candidate.color_v2
+                  }}
+                >
+                  <>
                     {
                       candidate.id && (
-                        <div>
-                          {
-                            candidate.address && <div>Адрес: {candidate.address}</div>
-                          }
-                          <div style={{ padding: '5px 0 5px 0' }}>Радиус расчета: {candidate.calculated_radius}м</div>
-                          <div>Тип: {candidate.type}</div>
-                          <div style={{ padding: '5px 0 5px 0' }}>Модификатор 1: {candidate.modifier_v1}</div>
-                          <div>Модификатор 2: {candidate.modifier_v2}</div>
-                        </div>
+                        <Popup>
+                          <div>
+                            {
+                              candidate.address && <div>Адрес: {candidate.address}</div>
+                            }
+                            <div style={{ padding: '5px 0 5px 0' }}>Радиус расчета: {candidate.calculated_radius}м</div>
+                            <div>Тип: {candidate.type}</div>
+                            <div style={{ padding: '5px 0 5px 0' }}>Модификатор 1: {candidate.modifier_v1}</div>
+                            <div>Модификатор 2: {candidate.modifier_v2}</div>
+                          </div>
+                        </Popup>
                       )
                     }
                     {
                       !candidate.id && (
-                        <div>
-                          { candidate.count }
-                        </div>
+                        <Tooltip>
+                          { candidate.count } шт
+                        </Tooltip>
                       )
                     }
-                  </Popup>
+                  </>
                 </Circle>
               )
             }
